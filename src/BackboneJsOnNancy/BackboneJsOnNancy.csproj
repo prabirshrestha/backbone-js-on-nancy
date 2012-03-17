@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\javascripts\app\app.js" />
     <Content Include="assets\javascripts\libs\backbone-support\composite_view.js" />
     <Content Include="assets\javascripts\libs\backbone-support\support.js" />
     <Content Include="assets\javascripts\libs\backbone-support\swapping_router.js" />
