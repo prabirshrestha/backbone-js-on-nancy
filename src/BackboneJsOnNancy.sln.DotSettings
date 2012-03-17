@@ -1,0 +1,5 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=76902B0D2CE06A49915EED61452E6D7F/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=76902B0D2CE06A49915EED61452E6D7F/AbsolutePath/@EntryValue">C:\dumps\misc\backbone-js-on-nancy\src\BackboneJsOnNancy.sln.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File_003A_003AC_003A_005Cdumps_005Cmisc_005Cbackbone_002Djs_002Don_002Dnancy_005Csrc_005CBackboneJsOnNancy_002Esln_002EDotSettings/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File_003A_003AC_003A_005Cdumps_005Cmisc_005Cbackbone_002Djs_002Don_002Dnancy_005Csrc_005CBackboneJsOnNancy_002Esln_002EDotSettings/RelativePriority/@EntryValue">1</s:Double></wpf:ResourceDictionary>
