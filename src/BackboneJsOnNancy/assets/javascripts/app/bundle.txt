@@ -1,3 +1,5 @@
-﻿*
-models
-routers
+﻿app.js
+models/*
+collections/*
+routers/*
+*

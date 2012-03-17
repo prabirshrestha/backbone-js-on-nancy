@@ -5,10 +5,12 @@
     Routers: {},
 
     initialize: function () {
-        
-// ReSharper disable WrongExpressionStatement
+
+        this.TodoList = new App.Collections.Todos;
+
+        // ReSharper disable WrongExpressionStatement
         new App.Routers.Todo();
-// ReSharper restore WrongExpressionStatement
+        // ReSharper restore WrongExpressionStatement
 
         if (!Backbone.history.started) {
             Backbone.history.start();
@@ -21,4 +23,5 @@
             this.currrentView.leave();
         this.currentView = newView;
     }
+
 };

@@ -1,7 +1,8 @@
 ﻿App.Models.Todo = Backbone.Model.extend({
     defaults: function () {
         return {
-            done: false
+            done: false,
+            order: App.TodoList.nextOrder()
         };
     },
 
