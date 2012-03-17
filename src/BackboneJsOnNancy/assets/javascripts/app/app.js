@@ -3,10 +3,11 @@
     Collections: {},
     Views: {},
     Routers: {},
+    Data: {},
 
     initialize: function () {
 
-        this.TodoList = new App.Collections.Todos;
+        this.Data.TodoList = new App.Collections.Todos;
 
         // ReSharper disable WrongExpressionStatement
         new App.Routers.Todo();
