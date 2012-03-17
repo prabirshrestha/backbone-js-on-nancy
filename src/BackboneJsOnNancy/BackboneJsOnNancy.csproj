@@ -100,6 +100,7 @@
     <Content Include="assets\javascripts\libs\backbone-support\swapping_router.js" />
     <Content Include="assets\javascripts\libs\backbone.js" />
     <Content Include="assets\javascripts\libs\bundle.txt" />
+    <Content Include="assets\javascripts\libs\console.log.js" />
     <Content Include="assets\javascripts\libs\jquery.js" />
     <Content Include="assets\javascripts\libs\json2.js" />
     <Content Include="assets\javascripts\libs\underscore.js" />

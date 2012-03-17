@@ -1,4 +1,5 @@
-﻿json2.js
+﻿console.log.js
+json2.js
 jquery.js
 underscore.js
 backbone.js
