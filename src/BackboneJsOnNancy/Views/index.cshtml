@@ -2,7 +2,8 @@
 @{
     Bundles.Reference("assets/javascripts/header");
     Bundles.Reference("assets/javascripts/libs");
-    Bundles.Reference("assets/javascripts/app");    
+    Bundles.Reference("assets/templates");
+    Bundles.Reference("assets/javascripts/app");
 }
 <!doctype html>
 <head>
@@ -11,9 +12,10 @@
 </head>
 <body>
     <div id="app">
-        backbone-js-on-nancy        
+        Loading App ...
     </div>
     @Bundles.RenderScripts("libs")
+    @Bundles.RenderHtmlTemplates()
     @Bundles.RenderScripts("app")
     <script>
         App.initialize({});

@@ -1,5 +1,6 @@
 ﻿app.js
 models/*
 collections/*
+views/*
 routers/*
 *
