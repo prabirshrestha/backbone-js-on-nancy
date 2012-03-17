@@ -21,6 +21,8 @@
     @Bundles.RenderHtmlTemplates()
     @Bundles.RenderScripts("app")
     <script>
-        App.initialize({});
+        App.initialize({
+            todos: [{content:'work'}, {content: 'eat'}]
+        });
     </script>
 </body>

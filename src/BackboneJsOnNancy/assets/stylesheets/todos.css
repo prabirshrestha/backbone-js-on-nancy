@@ -57,10 +57,10 @@ html {
     line-height: 1;
   }
 
-#create-todo {
+#todo-form {
   position: relative;
 }
-  #create-todo input {
+  #todo-form input {
     width: 466px;
     font-size: 24px;
     font-family: inherit;
@@ -74,10 +74,10 @@ html {
     -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
     box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
   }
-    #create-todo input::-webkit-input-placeholder {
+    #todo-form input::-webkit-input-placeholder {
       font-style: italic;
     }
-  #create-todo span {
+  #todo-form span {
     position: absolute;
     z-index: 999;
     width: 170px;

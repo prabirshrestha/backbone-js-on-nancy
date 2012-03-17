@@ -2,6 +2,7 @@
 
     initialize: function () {
         this.el = $('#app');
+        this.todos = App.Data.Todos;
     },
 
     routes: {
@@ -9,10 +10,13 @@
     },
 
     index: function () {
-        var view = new App.Views.TodoIndex();
+        var router = this;
+        var view = new App.Views.TodoIndex({
+            collection: this.todos
+        });
 
         App.leaveCurrentView(view);
-        this.swap(view);
+        router.swap(view);
     }
 
 });

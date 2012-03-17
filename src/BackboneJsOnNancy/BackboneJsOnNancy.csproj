@@ -100,6 +100,7 @@
     <Content Include="assets\javascripts\app\collections\todos.js" />
     <Content Include="assets\javascripts\app\models\todo.js" />
     <Content Include="assets\javascripts\app\routers\todo.js" />
+    <Content Include="assets\javascripts\app\views\todo\form.js" />
     <Content Include="assets\javascripts\libs\hogan.patch.cassette.js" />
     <Content Include="assets\javascripts\libs\hogan.mustache.js" />
     <Content Include="assets\stylesheets\todos.css" />
@@ -116,6 +117,7 @@
     <Content Include="assets\javascripts\libs\json2.js" />
     <Content Include="assets\javascripts\libs\underscore.js" />
     <Content Include="assets\javascripts\header\modernizr.js" />
+    <Content Include="assets\templates\todo\form.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

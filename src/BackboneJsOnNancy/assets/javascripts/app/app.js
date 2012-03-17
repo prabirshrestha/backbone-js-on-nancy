@@ -5,9 +5,9 @@
     Routers: {},
     Data: {},
 
-    initialize: function () {
-
-        this.Data.Todos = new App.Collections.Todos();
+    initialize: function (options) {
+        options = options || { };
+        this.Data.Todos = new App.Collections.Todos(options.todos);
 
         // ReSharper disable WrongExpressionStatement
         new App.Routers.Todo();
