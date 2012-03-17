@@ -2,23 +2,16 @@
 
     model: App.Models.Todo,
 
-    done: function () {
-        return this.filter(function (todo) {
-            return todo.get('done');
+    completed: function () {
+        return _.select(this.models, function (model) {
+            return model.get('status') === 'completed';
         });
     },
 
-    remaining: function () {
-        return this.without.apply(this, this.done());
-    },
-
-    nextOrder: function () {
-        if (!this.length) return 1;
-        return this.last().get('order') + 1;
-    },
-
-    comparator: function (todo) {
-        return todo.get('order');
+    incomplete: function () {
+        return _.select(this.models, function(model) {
+            return model.get('status') === 'incomplete';
+        });
     }
-    
+
 });

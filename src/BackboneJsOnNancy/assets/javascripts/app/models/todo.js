@@ -1,12 +1,14 @@
 ﻿App.Models.Todo = Backbone.Model.extend({
-    defaults: function () {
-        return {
-            done: false,
-            order: App.TodoList.nextOrder()
-        };
+
+    defaults: {
+        status: 'complete'
     },
 
-    toggle: function () {
-        this.save({ done: !this.get('done') });
+    isComplete: function () {
+        return this.get('status') === 'completed';
+    },
+
+    toggleStatus: function () {
+        this.get('status') === 'incomplete' ? this.set({ status: 'completed' }) : this.set({ status: 'incomplete' });
     }
 });

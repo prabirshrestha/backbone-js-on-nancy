@@ -3,7 +3,7 @@
     templateName: 'todo-index',
 
     initialize: function () {
-        this.todoCollection = App.TodoList;
+        this.todos = App.Data.Todos;
     },
 
     render: function () {

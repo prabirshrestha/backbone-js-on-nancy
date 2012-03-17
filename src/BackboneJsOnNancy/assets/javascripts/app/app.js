@@ -7,7 +7,7 @@
 
     initialize: function () {
 
-        this.Data.TodoList = new App.Collections.Todos;
+        this.Data.Todos = new App.Collections.Todos();
 
         // ReSharper disable WrongExpressionStatement
         new App.Routers.Todo();
