@@ -1,5 +1,6 @@
 ﻿@using Cassette.Nancy
 @{
+    Bundles.Reference("assets/stylesheets");
     Bundles.Reference("assets/javascripts/header");
     Bundles.Reference("assets/javascripts/libs");
     Bundles.Reference("assets/templates");
@@ -8,6 +9,7 @@
 <!doctype html>
 <head>
     <meta charset="utf-8"/>
+    @Bundles.RenderStylesheets()
     @Bundles.RenderScripts("header")
 </head>
 <body>

@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\images\destroy.png" />
     <Content Include="assets\javascripts\app\app.js" />
     <Content Include="assets\javascripts\app\bundle.txt" />
     <Content Include="assets\javascripts\app\collections\todos.js" />
@@ -101,6 +102,7 @@
     <Content Include="assets\javascripts\app\routers\todo.js" />
     <Content Include="assets\javascripts\libs\hogan.patch.cassette.js" />
     <Content Include="assets\javascripts\libs\hogan.mustache.js" />
+    <Content Include="assets\stylesheets\todos.css" />
     <Content Include="assets\templates\todo\index.html" />
     <Content Include="assets\javascripts\app\views\todo\index.js" />
     <Content Include="assets\javascripts\libs\backbone-support\composite_view.js" />
@@ -134,10 +136,7 @@
   <ItemGroup>
     <Content Include="Views\index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="assets\images\" />
-    <Folder Include="assets\stylesheets\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
