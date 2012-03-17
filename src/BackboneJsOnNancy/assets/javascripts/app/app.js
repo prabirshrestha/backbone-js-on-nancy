@@ -5,7 +5,15 @@
     Routers: {},
 
     initialize: function () {
-        console.log('app initialized');
+        
+// ReSharper disable WrongExpressionStatement
+        new App.Routers.Todo();
+// ReSharper restore WrongExpressionStatement
+
+        if (!Backbone.history.started) {
+            Backbone.history.start();
+            Backbone.history.started = true;
+        }
     },
 
     leaveCurrentView: function (newView) {

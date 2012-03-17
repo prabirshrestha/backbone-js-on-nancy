@@ -95,6 +95,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\javascripts\app\app.js" />
+    <Content Include="assets\javascripts\app\bundle.txt" />
+    <Content Include="assets\javascripts\app\routers\todo.js" />
     <Content Include="assets\javascripts\libs\backbone-support\composite_view.js" />
     <Content Include="assets\javascripts\libs\backbone-support\support.js" />
     <Content Include="assets\javascripts\libs\backbone-support\swapping_router.js" />
