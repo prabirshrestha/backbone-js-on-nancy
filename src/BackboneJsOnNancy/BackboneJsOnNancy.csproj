@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\javascripts\_vendor\modernizr-2.5.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -116,7 +117,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\images\" />
-    <Folder Include="assets\javascripts\_vendor\" />
     <Folder Include="assets\stylesheets\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
