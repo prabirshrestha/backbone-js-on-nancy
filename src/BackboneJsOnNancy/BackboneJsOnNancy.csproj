@@ -94,7 +94,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\javascripts\_vendor\modernizr-2.5.3.js" />
+    <Content Include="assets\javascripts\libs\backbone-support\composite_view.js" />
+    <Content Include="assets\javascripts\libs\backbone-support\support.js" />
+    <Content Include="assets\javascripts\libs\backbone-support\swapping_router.js" />
+    <Content Include="assets\javascripts\libs\backbone.js" />
+    <Content Include="assets\javascripts\libs\bundle.txt" />
+    <Content Include="assets\javascripts\libs\jquery.js" />
+    <Content Include="assets\javascripts\libs\json2.js" />
+    <Content Include="assets\javascripts\libs\underscore.js" />
+    <Content Include="assets\javascripts\header\modernizr.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

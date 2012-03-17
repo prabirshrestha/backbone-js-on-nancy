@@ -1,7 +1,15 @@
-﻿<!doctype html>
+﻿@using Cassette.Nancy
+@{
+    Bundles.Reference("assets/javascripts/header");
+    Bundles.Reference("assets/javascripts/libs");
+}
+<!doctype html>
 <head>
     <meta charset="utf-8"/>
+    @Bundles.RenderScripts("header")
 </head>
 <body>
     backbone-js-on-nancy
+    
+    @Bundles.RenderScripts("libs")
 </body>
