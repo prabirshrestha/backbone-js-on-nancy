@@ -11,9 +11,10 @@
     },
 
     initialize: function () {
-        _.bindAll(this, 'render', 'clear', 'toggleStatus', 'toggleEdit', 'updateModel');
+        _.bindAll(this, 'render', 'clear', 'toggleStatus', 'toggleEdit', 'updateModel', 'setStatus');
 
         this.model.bind('change:content', this.render);
+        this.model.bind('change:status', this.setStatus);
     },
 
     render: function () {
@@ -24,6 +25,7 @@
     renderTemplate: function () {
         var html = this.buildTemplate(this.model.toJSON());
         $(this.el).html(html);
+        this.setStatus();
     },
 
     clear: function () {
@@ -44,6 +46,15 @@
         this.model.set({
             content: this.$('.todo-input').val()
         });
+    },
+
+    setStatus: function () {
+        if (this.model.isComplete()) {
+            this.$('.todo').addClass('done');
+        }
+        else {
+            this.$('.todo').removeClass('done');
+        }
     }
 
 });
