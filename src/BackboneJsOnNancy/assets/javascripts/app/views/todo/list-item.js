@@ -5,11 +5,12 @@
 
     events: {
         'click span.todo-destroy': 'clear',
-        'click :checkbox': 'toggleStatus'
+        'click :checkbox': 'toggleStatus',
+        'dblclick div.todo-text': 'toggleEdit'
     },
 
     initialize: function () {
-        _.bindAll(this, 'render', 'clear', 'toggleStatus');
+        _.bindAll(this, 'render', 'clear', 'toggleStatus', 'toggleEdit');
     },
 
     render: function () {
@@ -28,6 +29,11 @@
 
     toggleStatus: function () {
         this.model.toggleStatus();
+    },
+
+    toggleEdit: function () {
+        $(this.el).toggleClass('editing');
+        this.$('input').focus();
     }
 
 });
