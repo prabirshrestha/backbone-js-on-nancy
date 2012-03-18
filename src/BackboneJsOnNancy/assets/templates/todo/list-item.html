@@ -1,1 +1,10 @@
-﻿{{content}}
+﻿<div class="todo {{# isComplete }}isComplete{{/ isComplete }}">
+    <div class="display">
+        <input class="check" type="checkbox" {{# isComplete }}checked="checked"{{/ isComplete}}/>
+        <div class="todo-text"></div>
+        <span class="todo-destroy"></span>
+    </div>
+    <div class="edit">
+        <input class="todo-input" type="text" value=""/>
+    </div>
+</div>
