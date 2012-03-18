@@ -7,12 +7,12 @@
         'click span.todo-destroy': 'clear',
         'click :checkbox': 'toggleStatus',
         'dblclick div.todo-text': 'toggleEdit',
-        'blur .todo-input': 'updateModel',
-        'keypress .todo-input': 'updateModelOnEnter'
+        'keypress .todo-input': 'updateModelOnEnter',
+        'keyup .todo-input': 'cancelModelUpdateOnEscape'
     },
 
     initialize: function () {
-        _.bindAll(this, 'render', 'clear', 'toggleStatus', 'toggleEdit', 'updateModel', 'updateModelOnEnter', 'setStatus');
+        _.bindAll(this, 'render', 'clear', 'toggleStatus', 'toggleEdit', 'updateModel', 'updateModelOnEnter', 'cancelModelUpdateOnEscape', 'setStatus');
 
         this.model.bind('change:content', this.render);
         this.model.bind('change:status', this.setStatus);
@@ -52,6 +52,12 @@
     updateModelOnEnter: function (e) {
         if (e.keyCode == 13) {
             this.updateModel();
+        }
+    },
+
+    cancelModelUpdateOnEscape: function (e) {
+        if (e.keyCode == 27) {
+            this.toggleEdit();
         }
     },
 
