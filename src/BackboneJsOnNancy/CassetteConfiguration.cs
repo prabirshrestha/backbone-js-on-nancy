@@ -15,7 +15,9 @@ namespace BackboneJsOnNancy
         {
             // Please read http://getcassette.net/documentation/configuration
 
-            bundles.Add<StylesheetBundle>("assets/stylesheets");
+            bundles.Add<StylesheetBundle>("assets/stylesheets",
+                                          b => b.Processor = new StylesheetPipeline()
+                                                                 .EmbedImages());
 
             bundles.Add<ScriptBundle>("assets/javascripts/header", b => b.PageLocation = "header");
             bundles.Add<ScriptBundle>("assets/javascripts/libs", b => b.PageLocation = "libs");
