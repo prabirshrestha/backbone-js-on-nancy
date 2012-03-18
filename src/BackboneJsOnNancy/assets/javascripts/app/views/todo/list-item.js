@@ -14,7 +14,6 @@
     renderTemplate: function () {
         var html = this.buildTemplate(this.model.toJSON());
         $(this.el).html(html);
-        console.log(html);
     }
 
 });

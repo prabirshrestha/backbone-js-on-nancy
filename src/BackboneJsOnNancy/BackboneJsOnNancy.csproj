@@ -100,10 +100,13 @@
     <Content Include="assets\javascripts\app\collections\todos.js" />
     <Content Include="assets\javascripts\app\models\todo.js" />
     <Content Include="assets\javascripts\app\routers\todo.js" />
+    <Content Include="assets\javascripts\app\views\todo\list-item.js" />
+    <Content Include="assets\javascripts\app\views\todo\list.js" />
     <Content Include="assets\javascripts\app\views\todo\form.js" />
     <Content Include="assets\javascripts\libs\hogan.patch.cassette.js" />
     <Content Include="assets\javascripts\libs\hogan.mustache.js" />
     <Content Include="assets\stylesheets\todos.css" />
+    <Content Include="assets\templates\todo\list-item.html" />
     <Content Include="assets\templates\todo\index.html" />
     <Content Include="assets\javascripts\app\views\todo\index.js" />
     <Content Include="assets\javascripts\libs\backbone-support\composite_view.js" />
