@@ -6,11 +6,14 @@
     events: {
         'click span.todo-destroy': 'clear',
         'click :checkbox': 'toggleStatus',
-        'dblclick div.todo-text': 'toggleEdit'
+        'dblclick div.todo-text': 'toggleEdit',
+        'blur .todo-input': 'updateModel'
     },
 
     initialize: function () {
-        _.bindAll(this, 'render', 'clear', 'toggleStatus', 'toggleEdit');
+        _.bindAll(this, 'render', 'clear', 'toggleStatus', 'toggleEdit', 'updateModel');
+
+        this.model.bind('change:content', this.render);
     },
 
     render: function () {
@@ -34,6 +37,13 @@
     toggleEdit: function () {
         $(this.el).toggleClass('editing');
         this.$('input').focus();
+    },
+
+    updateModel: function () {
+        $(this.el).toggleClass('editing');
+        this.model.set({
+            content: this.$('.todo-input').val()
+        });
     }
 
 });
