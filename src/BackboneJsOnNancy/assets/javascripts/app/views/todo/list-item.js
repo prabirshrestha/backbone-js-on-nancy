@@ -7,11 +7,12 @@
         'click span.todo-destroy': 'clear',
         'click :checkbox': 'toggleStatus',
         'dblclick div.todo-text': 'toggleEdit',
-        'blur .todo-input': 'updateModel'
+        'blur .todo-input': 'updateModel',
+        'keypress .todo-input': 'updateModelOnEnter'
     },
 
     initialize: function () {
-        _.bindAll(this, 'render', 'clear', 'toggleStatus', 'toggleEdit', 'updateModel', 'setStatus');
+        _.bindAll(this, 'render', 'clear', 'toggleStatus', 'toggleEdit', 'updateModel', 'updateModelOnEnter', 'setStatus');
 
         this.model.bind('change:content', this.render);
         this.model.bind('change:status', this.setStatus);
@@ -42,10 +43,16 @@
     },
 
     updateModel: function () {
-        $(this.el).toggleClass('editing');
+        this.toggleEdit();
         this.model.set({
             content: this.$('.todo-input').val()
         });
+    },
+
+    updateModelOnEnter: function (e) {
+        if (e.keyCode == 13) {
+            this.updateModel();
+        }
     },
 
     setStatus: function () {
