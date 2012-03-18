@@ -4,11 +4,12 @@
     templateName: 'todo-list-item',
 
     events: {
-        'click span.todo-destroy': 'clear'
+        'click span.todo-destroy': 'clear',
+        'click :checkbox': 'toggleStatus'
     },
 
     initialize: function () {
-        _.bindAll(this, 'render', 'clear');
+        _.bindAll(this, 'render', 'clear', 'toggleStatus');
     },
 
     render: function () {
@@ -23,6 +24,10 @@
 
     clear: function () {
         this.collection.remove(this.model);
+    },
+
+    toggleStatus: function () {
+        this.model.toggleStatus();
     }
 
 });
