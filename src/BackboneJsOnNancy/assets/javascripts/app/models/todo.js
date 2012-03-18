@@ -1,7 +1,7 @@
 ﻿App.Models.Todo = Backbone.Model.extend({
 
     defaults: {
-        status: 'complete'
+        status: 'incomplete'
     },
 
     isComplete: function () {
@@ -10,5 +10,9 @@
 
     toggleStatus: function () {
         this.get('status') === 'incomplete' ? this.set({ status: 'completed' }) : this.set({ status: 'incomplete' });
+    },
+
+    save: function () {
+        App.Data.Todos.add(this);
     }
 });

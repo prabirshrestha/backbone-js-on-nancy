@@ -12,16 +12,17 @@
         return this;
     },
 
-    save: function () {
-        var val = this.$('input').val();
+    save: function (e) {
+        var input = this.$('input');
+        
         var model = new App.Models.Todo({
-            name: val,
+            content: input.val(),
             id: App.Data.Todos.length
         });
-        model.save();
 
-        this.$('input').val();
-        event.preventDefault();
+        model.save();
+        input.val('');
+        e.preventDefault();
     }
 
 });
