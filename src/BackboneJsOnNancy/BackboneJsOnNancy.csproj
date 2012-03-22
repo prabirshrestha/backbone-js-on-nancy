@@ -99,7 +99,9 @@
     <Content Include="assets\javascripts\app\bundle.txt" />
     <Content Include="assets\javascripts\app\collections\todos.js" />
     <Content Include="assets\javascripts\app\models\todo.js" />
+    <Content Include="assets\javascripts\app\routers\about.js" />
     <Content Include="assets\javascripts\app\routers\todo.js" />
+    <Content Include="assets\javascripts\app\views\about\index.js" />
     <Content Include="assets\javascripts\app\views\todo\list-item.js" />
     <Content Include="assets\javascripts\app\views\todo\list.js" />
     <Content Include="assets\javascripts\app\views\todo\form.js" />

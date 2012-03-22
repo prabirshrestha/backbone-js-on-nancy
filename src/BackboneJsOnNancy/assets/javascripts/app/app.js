@@ -6,11 +6,12 @@
     Data: {},
 
     initialize: function (options) {
-        options = options || { };
+        options = options || {};
         this.Data.Todos = new App.Collections.Todos(options.todos);
 
         // ReSharper disable WrongExpressionStatement
         new App.Routers.Todo();
+        new App.Routers.About();
         // ReSharper restore WrongExpressionStatement
 
         if (!Backbone.history.started) {
@@ -21,7 +22,7 @@
 
     leaveCurrentView: function (newView) {
         if (this.currentView)
-            this.currrentView.leave();
+            this.currentView.leave();
         this.currentView = newView;
     }
 
