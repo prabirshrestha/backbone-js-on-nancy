@@ -47,6 +47,7 @@ lint.db
 
 # NuGet package folder
 packages/
+NuGet.exe
 
 # Misc Ignores
 Thumbs.db
