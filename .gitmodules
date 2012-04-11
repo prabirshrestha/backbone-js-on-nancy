@@ -1,0 +1,3 @@
+[submodule "nancyfx/nancy-prabir"]
+	path = nancyfx/nancy-prabir
+	url = https://github.com/prabirshrestha/Nancy.git
