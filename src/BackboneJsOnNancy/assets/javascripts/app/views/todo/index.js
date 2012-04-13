@@ -3,6 +3,7 @@
     templateName: 'todo-index',
 
     initialize: function () {
+        _.bindAll(this, 'render');
         this.views = {};
     },
 
@@ -15,13 +16,12 @@
 
     renderTemplate: function () {
         var html = this.buildTemplate();
-        $(this.el).html(html);
+        this.$el.html(html);
     },
 
     renderFormTemplate: function () {
-        var formView = this.views.formView = new App.Views.TodoForm();
-        this.renderChild(formView);
-        this.$('.content').append(formView.el);
+        this.views.formView = new App.Views.TodoForm();
+        this.renderChildInto(this.views.formView, this.$('.content'));
     },
 
     renderListTemplate: function () {
