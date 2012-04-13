@@ -21,16 +21,15 @@
 
     renderFormTemplate: function () {
         this.views.formView = new App.Views.TodoForm();
-        this.renderChildInto(this.views.formView, this.$('.content'));
+        this.renderChildInto(this.views.formView, this.$('.content .form'));
     },
 
     renderListTemplate: function () {
-        var listView = this.views.listView = new App.Views.TodoList({
+        this.views.listView = this.views.listView = new App.Views.TodoList({
             collection: this.collection
         });
 
-        this.renderChild(listView);
-        this.$('.content').append(listView.el);
+        this.renderChildInto(this.views.listView, this.$('.content .list'));
     }
 
 });
