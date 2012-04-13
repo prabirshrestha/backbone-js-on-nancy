@@ -1,8 +1,8 @@
 ﻿App.Routers.Todo = Support.SwappingRouter.extend({
 
-    initialize: function () {
+    initialize: function (options) {
         this.el = $('#app');
-        this.todos = App.todos;
+        this.todos = options.todos;
     },
 
     routes: {
