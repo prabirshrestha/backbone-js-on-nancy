@@ -10,10 +10,11 @@
 
     index: function () {
         var router = this;
-        var view = new App.Views.AboutIndex();
+        var view = new App.Views.AboutIndex({
+            router: router
+        });
 
-        App.leaveCurrentView(view);
-        router.swap(view);
+        this.swap(view);
     }
 
 });

@@ -12,11 +12,11 @@
     index: function () {
         var router = this;
         var view = new App.Views.TodoIndex({
-            collection: this.todos
+            collection: this.todos,
+            router: router
         });
 
-        App.leaveCurrentView(view);
-        router.swap(view);
+        this.swap(view);
     }
 
 });

@@ -19,12 +19,6 @@
             Backbone.history.start();
             Backbone.history.started = true;
         }
-    },
-
-    leaveCurrentView: function (newView) {
-        if (this.currentView)
-            this.currentView.leave();
-        this.currentView = newView;
     }
 
 };
