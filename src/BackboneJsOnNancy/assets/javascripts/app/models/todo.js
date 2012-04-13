@@ -13,6 +13,6 @@
     },
 
     save: function () {
-        App.Data.Todos.add(this);
+        App.todos.add(this);
     }
 });

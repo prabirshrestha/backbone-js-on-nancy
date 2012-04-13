@@ -17,7 +17,7 @@
         
         var model = new App.Models.Todo({
             content: input.val(),
-            id: App.Data.Todos.length
+            id: App.todos.length
         });
 
         model.save();

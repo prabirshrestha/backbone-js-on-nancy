@@ -2,7 +2,7 @@
 
     initialize: function () {
         this.el = $('#app');
-        this.todos = App.Data.Todos;
+        this.todos = App.todos;
     },
 
     routes: {
