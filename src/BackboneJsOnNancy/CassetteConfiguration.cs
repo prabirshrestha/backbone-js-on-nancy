@@ -15,7 +15,7 @@ namespace BackboneJsOnNancy
         {
             // Please read http://getcassette.net/documentation/configuration
 
-            bundles.Add<StylesheetBundle>("assets/stylesheets",
+            bundles.Add<StylesheetBundle>("assets/stylesheets/style.less",
                                           b => b.Processor = new StylesheetPipeline()
                                                                  .EmbedImages());
 

@@ -145,7 +145,13 @@
     <Content Include="assets\javascripts\app\views\todo\form.js" />
     <Content Include="assets\javascripts\libs\hogan.patch.cassette.js" />
     <Content Include="assets\javascripts\libs\hogan.mustache.js" />
-    <Content Include="assets\stylesheets\todos.css" />
+    <None Include="assets\stylesheets\todo\instructions.less" />
+    <None Include="assets\stylesheets\todo\form.less" />
+    <None Include="assets\stylesheets\todo\list.less" />
+    <None Include="assets\stylesheets\todo\stats.less" />
+    <None Include="assets\stylesheets\todo\todo.less" />
+    <None Include="assets\stylesheets\reset.less" />
+    <None Include="assets\stylesheets\style.less" />
     <Content Include="assets\templates\todo\list-item.html" />
     <Content Include="assets\templates\todo\index.html" />
     <Content Include="assets\javascripts\app\views\todo\index.js" />
@@ -168,6 +174,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <None Include="assets\stylesheets\todo\tooltips.less" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
