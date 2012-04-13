@@ -3,7 +3,6 @@
     Collections: {},
     Views: {},
     Routers: {},
-    Data: {},
 
     initialize: function (options) {
         options || (options = {});
