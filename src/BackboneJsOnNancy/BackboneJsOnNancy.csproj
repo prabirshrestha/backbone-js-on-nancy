@@ -85,6 +85,9 @@
     <Reference Include="Nancy, Version=0.10.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.dll</HintPath>
     </Reference>
+    <Reference Include="Nancy.Authentication.Forms">
+      <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.Authentication.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="Nancy.Hosting.Aspnet, Version=0.10.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.Hosting.Aspnet.dll</HintPath>
     </Reference>
