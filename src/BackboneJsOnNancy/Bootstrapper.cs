@@ -3,7 +3,6 @@ namespace BackboneJsOnNancy
 {
     using System;
     using System.Collections.Generic;
-    using Cassette.Nancy;
     using Nancy;
     using Nancy.Bootstrapper;
 
@@ -13,7 +12,9 @@ namespace BackboneJsOnNancy
         {
             base.ApplicationStartup(container, pipelines);
 
-            CassetteStartup.ShouldOptimizeOutput = false;
+#if !DEBUG
+            Cassette.Nancy.CassetteStartup.ShouldOptimizeOutput = true;
+#endif
         }
 
         protected override NancyInternalConfiguration InternalConfiguration
