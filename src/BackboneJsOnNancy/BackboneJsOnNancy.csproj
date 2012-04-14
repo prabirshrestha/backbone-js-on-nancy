@@ -187,6 +187,7 @@
     <Compile Include="ErrorHandlers\CustomRazorErrorHandler.cs" />
     <Compile Include="ErrorHandlers\Generic404ErrorHandler.cs" />
     <Compile Include="Modules\AppModule.cs" />
+    <Compile Include="Modules\AuthenticationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
