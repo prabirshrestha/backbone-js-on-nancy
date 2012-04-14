@@ -37,7 +37,15 @@
                     string.Concat(viewNameWithoutExtension, ".cshtml");
 
                 context.Response = _factory.RenderView(viewName, null, viewContext);
+                // _factory.RenderView sets the context.Response.StatusCode to HttpStatusCode.OK
+                // so make sure to overried it correctly
+                PostHandle(statusCode, context);
             }
+        }
+
+        public virtual void PostHandle(HttpStatusCode statusCode, NancyContext context)
+        {
+            context.Response.StatusCode = statusCode;
         }
     }
 }
