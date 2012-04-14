@@ -152,6 +152,7 @@
     <None Include="assets\stylesheets\todo\todo.less" />
     <None Include="assets\stylesheets\reset.less" />
     <None Include="assets\stylesheets\style.less" />
+    <Content Include="assets\templates\about\index.html" />
     <Content Include="assets\templates\todo\list-item.html" />
     <Content Include="assets\templates\todo\index.html" />
     <Content Include="assets\javascripts\app\views\todo\index.js" />

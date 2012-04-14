@@ -25,7 +25,7 @@
 
     renderTemplate: function () {
         var html = this.buildTemplate(this.model.toJSON());
-        $(this.el).html(html);
+        this.$el.html(html);
         this.setStatus();
     },
 
@@ -38,7 +38,7 @@
     },
 
     toggleEdit: function () {
-        $(this.el).toggleClass('editing');
+        this.$el.toggleClass('editing');
         this.$('input').focus();
     },
 

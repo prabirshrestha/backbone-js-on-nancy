@@ -17,6 +17,8 @@
     },
 
     save: function (e) {
+        e.preventDefault();
+        
         var input = this.$('input');
 
         var model = new App.Models.Todo({
@@ -26,7 +28,6 @@
 
         model.save();
         input.val('');
-        e.preventDefault();
     }
 
 });

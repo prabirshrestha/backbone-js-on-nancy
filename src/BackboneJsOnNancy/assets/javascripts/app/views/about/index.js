@@ -3,7 +3,7 @@
     templateName: 'about-index',
 
     initialize: function () {
-        this.views = {};
+        _.bindAll(this, 'render');
     },
 
     render: function () {
@@ -12,8 +12,8 @@
     },
 
     renderTemplate: function () {
-        $(this.el).empty();
-        console.log('about-index');
+        var html = this.buildTemplate();
+        this.$el.html(html);
     }
 
 });

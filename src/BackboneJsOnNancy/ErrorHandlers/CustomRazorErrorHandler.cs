@@ -38,7 +38,7 @@
 
                 context.Response = _factory.RenderView(viewName, null, viewContext);
                 // _factory.RenderView sets the context.Response.StatusCode to HttpStatusCode.OK
-                // so make sure to overried it correctly
+                // so make sure to override it correctly
                 PostHandle(statusCode, context);
             }
         }

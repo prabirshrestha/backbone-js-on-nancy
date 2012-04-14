@@ -4,7 +4,6 @@
 
     initialize: function () {
         _.bindAll(this, 'render');
-        this.views = {};
     },
 
     render: function () {
@@ -20,16 +19,16 @@
     },
 
     renderFormTemplate: function () {
-        this.views.formView = new App.Views.TodoForm();
-        this.renderChildInto(this.views.formView, this.$('.content .form'));
+        var view = new App.Views.TodoForm();
+        this.renderChildInto(view, this.$('.content .form'));
     },
 
     renderListTemplate: function () {
-        this.views.listView = this.views.listView = new App.Views.TodoList({
+        var view = new App.Views.TodoList({
             collection: this.collection
         });
 
-        this.renderChildInto(this.views.listView, this.$('.content .list'));
+        this.renderChildInto(view, this.$('.content .list'));
     }
 
 });
