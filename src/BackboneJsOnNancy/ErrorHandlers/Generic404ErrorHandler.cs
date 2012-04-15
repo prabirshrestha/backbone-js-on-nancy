@@ -15,9 +15,13 @@
             return statusCode == HttpStatusCode.NotFound;
         }
 
-        public override string HandleWithViewName(HttpStatusCode statusCode, NancyContext context)
+        public override void Handle(HttpStatusCode statusCode, NancyContext context)
         {
-            return "404";
+            RenderView(context, "404");
+
+            // RenderView sets the context.Response.StatusCode to HttpStatusCode.OK
+            // so make sure to override it correctly
+            context.Response.StatusCode = HttpStatusCode.NotFound;
         }
     }
 }

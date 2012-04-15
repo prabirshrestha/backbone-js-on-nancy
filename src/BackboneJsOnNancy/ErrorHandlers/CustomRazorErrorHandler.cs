@@ -18,34 +18,20 @@
         }
 
         public abstract bool HandlesStatusCode(HttpStatusCode statusCode, NancyContext context);
+        public abstract void Handle(HttpStatusCode statusCode, NancyContext context);
 
-        public abstract string HandleWithViewName(HttpStatusCode statusCode, NancyContext context);
-
-        public void Handle(HttpStatusCode statusCode, NancyContext context)
+        public void RenderView(NancyContext context, string viewName, dynamic model = null)
         {
-            var viewNameWithoutExtension = HandleWithViewName(statusCode, context);
             var foundMatchingView = _cache.Any(x =>
-                x.Name.Equals(viewNameWithoutExtension) &&
+                x.Name.Equals(viewName) &&
                 x.Extension.Equals("cshtml", StringComparison.OrdinalIgnoreCase));
 
             if (foundMatchingView)
             {
-                var viewContext =
-                    new ViewLocationContext { Context = context };
+                var viewContext = new ViewLocationContext { Context = context };
 
-                var viewName =
-                    string.Concat(viewNameWithoutExtension, ".cshtml");
-
-                context.Response = _factory.RenderView(viewName, null, viewContext);
-                // _factory.RenderView sets the context.Response.StatusCode to HttpStatusCode.OK
-                // so make sure to override it correctly
-                PostHandle(statusCode, context);
+                context.Response = _factory.RenderView(viewName, model, viewContext);
             }
-        }
-
-        public virtual void PostHandle(HttpStatusCode statusCode, NancyContext context)
-        {
-            context.Response.StatusCode = statusCode;
         }
     }
 }
