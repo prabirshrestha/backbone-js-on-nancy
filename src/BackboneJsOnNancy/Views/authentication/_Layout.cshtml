@@ -1,0 +1,21 @@
+﻿@using Cassette.Nancy
+@{
+    Bundles.Reference("assets/stylesheets/style.less");
+    Bundles.Reference("assets/javascripts/header");
+    Bundles.Reference("assets/javascripts/libs");
+    Bundles.Reference("assets/templates");
+    Bundles.Reference("assets/javascripts/app");
+}
+<!doctype html>
+<head lang="en">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Bundles.RenderStylesheets()
+    @Bundles.RenderScripts("header")
+    @RenderSection("header", required: false)
+</head>
+<body>
+    @RenderBody()
+    @Bundles.RenderScripts("libs")
+    @RenderSection("footer", required: false)
+</body>
