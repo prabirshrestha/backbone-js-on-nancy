@@ -22,7 +22,17 @@
 
         public void Handle(HttpStatusCode statusCode, NancyContext context)
         {
-            context.Response = new JsonResponse(new { error = "path not found" }, _serializers.First(s => s.CanSerialize("application/json")));
+            var serializer = _serializers.First(s => s.CanSerialize("application/json"));
+
+            var error = new
+                            {
+                                message = "The resource you requested does not exist"
+                            };
+
+            var response = new JsonResponse(new { error }, serializer);
+            //response.StatusCode = HttpStatusCode.NotFound;
+
+            context.Response = response;
         }
     }
 }
