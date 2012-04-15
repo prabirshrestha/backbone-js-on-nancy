@@ -26,7 +26,7 @@ namespace BackboneJsOnNancy.Web
                     {
                         x.ErrorHandlers = new List<Type>
                                               {
-                                                  typeof(Api.ErrorHandlers.Api404ErrorHandler),
+                                                  typeof (Api.ErrorHandlers.Api404ErrorHandler),
                                                   typeof (ErrorHandlers.Generic404ErrorHandler),
                                                   typeof (Nancy.ErrorHandling.DefaultErrorHandler),
                                               };
