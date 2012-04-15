@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 11
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackboneJsOnNancy", "BackboneJsOnNancy\BackboneJsOnNancy.csproj", "{C7A58EAB-1084-48A7-9647-866D97E51F38}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackboneJsOnNancy.Api", "BackboneJsOnNancy.Api\BackboneJsOnNancy.Api.csproj", "{8CC54ED4-93C4-4E40-84FB-77DF01157082}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackboneJsOnNancy.Web", "BackboneJsOnNancy.Web\BackboneJsOnNancy.Web.csproj", "{C7A58EAB-1084-48A7-9647-866D97E51F38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackboneJsOnNancy", "BackboneJsOnNancy\BackboneJsOnNancy.csproj", "{B933B963-BAAB-4C81-8AF3-21467C7BB905}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CC54ED4-93C4-4E40-84FB-77DF01157082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC54ED4-93C4-4E40-84FB-77DF01157082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC54ED4-93C4-4E40-84FB-77DF01157082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC54ED4-93C4-4E40-84FB-77DF01157082}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C7A58EAB-1084-48A7-9647-866D97E51F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C7A58EAB-1084-48A7-9647-866D97E51F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7A58EAB-1084-48A7-9647-866D97E51F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7A58EAB-1084-48A7-9647-866D97E51F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B933B963-BAAB-4C81-8AF3-21467C7BB905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B933B963-BAAB-4C81-8AF3-21467C7BB905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B933B963-BAAB-4C81-8AF3-21467C7BB905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B933B963-BAAB-4C81-8AF3-21467C7BB905}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

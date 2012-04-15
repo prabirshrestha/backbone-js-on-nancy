@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BackboneJsOnNancy")]
+[assembly: AssemblyTitle("BackboneJsOnNancy.Api")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BackboneJsOnNancy")]
+[assembly: AssemblyProduct("BackboneJsOnNancy.Api")]
 [assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a772c6bb-780a-4363-9cbd-b6d4f50579cc")]
+[assembly: Guid("e0c47009-a77d-41ff-acd9-7d5581ebc08f")]
 
 // Version information for an assembly consists of the following four values:
 //

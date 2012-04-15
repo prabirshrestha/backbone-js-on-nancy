@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B933B963-BAAB-4C81-8AF3-21467C7BB905}</ProjectGuid>
+    <ProjectGuid>{8CC54ED4-93C4-4E40-84FB-77DF01157082}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BackboneJsOnNancy</RootNamespace>
-    <AssemblyName>BackboneJsOnNancy</AssemblyName>
+    <RootNamespace>BackboneJsOnNancy.Api</RootNamespace>
+    <AssemblyName>BackboneJsOnNancy.Api</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -45,10 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ErrorHandlers\Api404ErrorHandler.cs" />
+    <Compile Include="Modules\TodosModule.cs" />
+    <Compile Include="Modules\_ApiModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BackboneJsOnNancy\BackboneJsOnNancy.csproj">
+      <Project>{B933B963-BAAB-4C81-8AF3-21467C7BB905}</Project>
+      <Name>BackboneJsOnNancy</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
