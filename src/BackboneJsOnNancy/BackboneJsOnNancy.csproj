@@ -171,7 +171,7 @@
     <Content Include="assets\javascripts\libs\underscore.js" />
     <Content Include="assets\javascripts\header\modernizr.js" />
     <Content Include="assets\templates\todo\form.html" />
-    <None Include="Views\404.cshtml" />
+    <None Include="Views\errors\404.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -186,8 +186,8 @@
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="CassetteConfiguration.cs" />
-    <Compile Include="ErrorHandlers\CustomRazorErrorHandler.cs" />
     <Compile Include="ErrorHandlers\Generic404ErrorHandler.cs" />
+    <Compile Include="Extensions\ViewFactoryExtensions.cs" />
     <Compile Include="Modules\AppModule.cs" />
     <Compile Include="Modules\AuthenticationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
