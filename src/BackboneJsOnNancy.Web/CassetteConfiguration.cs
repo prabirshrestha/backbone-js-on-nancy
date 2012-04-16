@@ -22,6 +22,7 @@ namespace BackboneJsOnNancy.Web
             bundles.Add<ScriptBundle>("assets/javascripts/header", b => b.PageLocation = "header");
             bundles.Add<ScriptBundle>("assets/javascripts/libs", b => b.PageLocation = "libs");
             bundles.Add<ScriptBundle>("assets/javascripts/app", b => b.PageLocation = "app");
+            bundles.Add<ScriptBundle>("assets/javascripts/public_app", b => b.PageLocation = "public_app");
 
             bundles.Add<HtmlTemplateBundle>("assets/templates", b => b.Processor = new HoganPipeline { JavaScriptVariableName = "JST" });
         }

@@ -1,4 +1,6 @@
-﻿var App = {
+﻿var App = App || { };
+
+App = {
 
     Models: {},
     Collections: {},

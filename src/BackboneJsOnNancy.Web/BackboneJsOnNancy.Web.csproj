@@ -191,6 +191,10 @@
     <None Include="assets\stylesheets\todo\todo.less" />
     <None Include="assets\stylesheets\reset.less" />
     <None Include="assets\stylesheets\style.less" />
+    <Content Include="assets\javascripts\public_app\app.js" />
+    <Content Include="assets\javascripts\public_app\bundle.txt" />
+    <Content Include="assets\javascripts\public_app\routers\authentication.js" />
+    <Content Include="assets\javascripts\public_app\views\authentication\register.js" />
     <Content Include="assets\stylesheets\bootstrap\img\glyphicons-halflings-white.png" />
     <Content Include="assets\stylesheets\bootstrap\img\glyphicons-halflings.png" />
     <Content Include="assets\javascripts\libs\bootstrap\bootstrap-alert.js" />
@@ -258,6 +262,10 @@
       <Project>{B933B963-BAAB-4C81-8AF3-21467C7BB905}</Project>
       <Name>BackboneJsOnNancy</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\javascripts\public_app\collections\" />
+    <Folder Include="assets\javascripts\public_app\models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
