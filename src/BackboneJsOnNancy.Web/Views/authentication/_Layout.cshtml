@@ -26,7 +26,14 @@
             </div>
         </div>
     </div>
-    @RenderBody()
-    @Bundles.RenderScripts("libs")
-    @RenderSection("footer", required: false)
+    
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                @RenderBody()
+                @Bundles.RenderScripts("libs")
+                @RenderSection("footer", required: false)
+            </div>
+        </div>
+    </div>
 </body>
