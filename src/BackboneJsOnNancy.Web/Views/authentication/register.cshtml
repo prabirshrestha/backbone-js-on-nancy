@@ -6,7 +6,7 @@
     Bundles.Reference("assets/javascripts/app");
 }
 
-<form class="form-horizontal">
+<form class="form-horizontal" method="POST">
     <fieldset>
         <legend>Register a New Account</legend>
         <div class="control-group">
@@ -18,13 +18,13 @@
         <div class="control-group">
             <label class="control-label" for="password">Password</label>
             <div class="controls">
-                <input type="password" class="input-xlarge" id="password" name="password"/>
+                <input type="password" class="input-xlarge" id="password" name="password" placeholder="Password" autocomplete="off"/>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="confirmPassword">Confirm Password</label>
             <div class="controls">
-                <input type="password" class="input-xlarge" id="confirmPassword" name="confirmPassword"/>
+                <input type="password" class="input-xlarge" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" autocomplete="off"/>
             </div>
         </div>
         <div class="form-actions">

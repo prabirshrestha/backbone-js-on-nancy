@@ -16,6 +16,11 @@
                                    ViewBag.preLoadAppStaticContent = preLoadAppStaticContent;
                                    return View["authentication/register"];
                                };
+
+            Post["/register"] = x =>
+                                {
+                                    return Response.AsRedirect("~/register?success=true");
+                                };
         }
     }
 }
