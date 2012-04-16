@@ -221,6 +221,7 @@
     <Content Include="assets\javascripts\libs\underscore.js" />
     <Content Include="assets\javascripts\header\modernizr.js" />
     <Content Include="assets\templates\todo\form.html" />
+    <Content Include="Views\authentication\login.cshtml" />
     <None Include="Views\errors\404.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
