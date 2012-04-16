@@ -15,6 +15,17 @@
     @RenderSection("header", required: false)
 </head>
 <body>
+    <div class="navbar nvarbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                
+                <a class="brand" href="#">
+                    Backbone JS on Nancy
+                </a>
+
+            </div>
+        </div>
+    </div>
     @RenderBody()
     @Bundles.RenderScripts("libs")
     @RenderSection("footer", required: false)
