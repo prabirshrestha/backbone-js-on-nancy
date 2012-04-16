@@ -31,9 +31,22 @@
         <div class="row">
             <div class="span12">
                 @RenderBody()
-                @Bundles.RenderScripts("libs")
-                @RenderSection("footer", required: false)
+                
             </div>
         </div>
+        
+        @Bundles.RenderScripts("libs")
+        <footer class="footer">
+            <p>Powered by 
+                <a href="http://documentcloud.github.com/backbone/" target="_blank" title="Backbone.js">Backbone</a>, 
+                <a href="http://nancyfx.org" target="_blank" title="Nancy - Lightweight Web Framework for .net">Nancy</a> and
+                <a href="http://getcassette.net/" target="_blank" title="Asset bundling for .NET web apps">Cassette</a>.
+                </p>
+        </footer>
+        
+        @RenderSection("footer", required: false)
     </div>
+    
+     
+
 </body>
