@@ -6,6 +6,10 @@
     Bundles.Reference("assets/javascripts/app");
 }
 
+<div class="alert alert-info">
+    <strong>Already have an account?</strong> <a href="@Url.Content("~/login")">Click here to login.</a>
+</div>
+
 <form class="form-horizontal" method="POST">
     <fieldset>
         <legend>Register a New Account</legend>
@@ -50,7 +54,6 @@
                         id && (js.id = id);
                         fjs.parentNode.insertBefore(js, fjs);
                     };
-                add('@Bundles.Url("assets/javascripts/libs")', "js-libs");
                 add('@Bundles.Url("assets/templates")', "js-templates");
                 add('@Bundles.Url("assets/javascripts/app")', "js-app");
             }(document, 'script'));
