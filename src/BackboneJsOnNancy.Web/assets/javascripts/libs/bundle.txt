@@ -7,4 +7,8 @@ backbone.js
 backbone-support/support.js
 backbone-support/composite_view.js
 backbone-support/swapping_router.js
+
+bootstrap/bootstrap-tooltip.js
+bootstrap/*
+
 *
