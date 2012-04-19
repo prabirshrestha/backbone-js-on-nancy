@@ -8,7 +8,7 @@
 
     initialize: function () {
         _.bindAll(this, 'cancel');
-        this.inputs = this.$('input[type=text], input[type=password]');
+        this.inputs = this.$('input[type=email], input[type=password]');
     },
 
     cancel: function (e) {

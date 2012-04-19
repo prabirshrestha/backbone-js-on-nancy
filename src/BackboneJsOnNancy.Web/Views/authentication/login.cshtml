@@ -17,7 +17,7 @@
         <label class="control-label" for="email">
             Email</label>
         <div class="controls">
-            <input type="text" class="input-xlarge" id="email" name="email" placeholder="Email" />
+            <input type="email" class="input-xlarge" id="email" name="email" placeholder="Email" />
         </div>
     </div>
     <div class="control-group">
@@ -37,6 +37,7 @@
     @Bundles.RenderScripts("libs")
     @Bundles.RenderScripts("public_app")
     <script>
+        App.Public.initialize();
     </script>
     @*if(ViewBag.preLoadAppStaticContent)*@
     @if (true)
