@@ -8,6 +8,8 @@ App.Public = {
 
     initialize: function (options) {
         options || (options = {});
+        $('.dropdown-toggle').dropdown();
+
         if (options.path) {
             if (options.path === '/register') {
                 // ReSharper disable WrongExpressionStatement
