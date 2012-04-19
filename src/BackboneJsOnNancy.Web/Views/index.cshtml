@@ -1,29 +1,22 @@
 ﻿@using Cassette.Nancy
 @{
-    Bundles.Reference("assets/stylesheets/style.less");
-    Bundles.Reference("assets/javascripts/header");
+    Layout = "_Layout.cshtml";
     Bundles.Reference("assets/javascripts/libs");
     Bundles.Reference("assets/templates");
     Bundles.Reference("assets/javascripts/app");
 }
-<!doctype html>
-<head lang="en">
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @Bundles.RenderStylesheets()
-    @Bundles.RenderScripts("header")
-</head>
-<body>
-    <noscript>Javascript must be enabled to use this app.</noscript>
-    <div id="app">
-        Loading App ...
-    </div>
+<noscript>Javascript must be enabled to use this app.</noscript>
+<div id="app">
+    Loading App ...
+</div>
+
+@section footer{
     @Bundles.RenderScripts("libs")
     @Bundles.RenderHtmlTemplates()
     @Bundles.RenderScripts("app")
     <script>
         App.initialize({
-            todos: [{ content: 'work', status: 'completed' }, { content: 'eat'}]
+            todos: [{ content: 'work', status: 'completed' }, { content: 'eat' }]
         });
     </script>
-</body>
+}

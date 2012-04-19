@@ -4,6 +4,7 @@
     Bundles.Reference("assets/javascripts/libs");
     Bundles.Reference("assets/templates");
     Bundles.Reference("assets/javascripts/app");
+    Bundles.Reference("assets/javascripts/public_app");        
 }
 
 <div class="alert alert-info">
@@ -39,6 +40,8 @@
 </form>
 
 @section footer{
+    @Bundles.RenderScripts("libs")
+    @Bundles.RenderScripts("public_app")
     <script>
         new App.Public.Views.RegisterView();
     </script>

@@ -235,7 +235,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <None Include="assets\stylesheets\todo\tooltips.less" />
-    <Content Include="Views\authentication\_Layout.cshtml" />
+    <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\authentication\register.cshtml" />
   </ItemGroup>
   <ItemGroup>
