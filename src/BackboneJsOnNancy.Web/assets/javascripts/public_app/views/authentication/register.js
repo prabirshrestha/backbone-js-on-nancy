@@ -1,6 +1,6 @@
 ﻿App.Public.Views.RegisterView = Support.CompositeView.extend({
 
-    el: $('.container form[role=register]'),
+    el: $('div[role="main"] form[role=register]'),
 
     events: {
         'click input[role=cancel]': 'cancel'

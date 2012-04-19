@@ -15,7 +15,7 @@
     @RenderSection("header", required: false)
 </head>
 <body>
-    <div class="navbar nvarbar-fixed-top">
+    <header class="navbar nvarbar-fixed-top" role="header">
         <div class="navbar-inner">
             <div class="container">
                 
@@ -25,16 +25,16 @@
 
             </div>
         </div>
-    </div>
+    </header>
     
-    <div class="container">
+    <div class="container" role="main">
         <div class="row">
             <div class="span12">
                 @RenderBody()
             </div>
         </div>
         
-        <footer class="footer">
+        <footer class="footer" role="footer">
             <p>Powered by 
                 <a href="http://documentcloud.github.com/backbone/" target="_blank" title="Backbone.js">Backbone</a>, 
                 <a href="http://nancyfx.org" target="_blank" title="Nancy - Lightweight Web Framework for .net">Nancy</a> and
