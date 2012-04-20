@@ -36,6 +36,9 @@
     <Reference Include="Nancy">
       <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.dll</HintPath>
     </Reference>
+    <Reference Include="Nancy.Authentication.Forms, Version=0.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.Authentication.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserMapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
