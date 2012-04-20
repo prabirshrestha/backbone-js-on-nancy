@@ -30,7 +30,7 @@
                             };
 
             var response = new JsonResponse(new { error }, serializer);
-            //response.StatusCode = HttpStatusCode.NotFound;
+            response.StatusCode = HttpStatusCode.NotFound;
 
             context.Response = response;
         }
