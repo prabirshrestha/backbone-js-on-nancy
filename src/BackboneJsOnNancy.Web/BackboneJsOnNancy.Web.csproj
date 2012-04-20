@@ -12,7 +12,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BackboneJsOnNancy.Web</RootNamespace>
-    <AssemblyName>BackboneJsOnNancy</AssemblyName>
+    <AssemblyName>BackboneJsOnNancy.Web</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <FileUpgradeFlags>
@@ -85,7 +85,7 @@
     <Reference Include="Nancy, Version=0.10.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.dll</HintPath>
     </Reference>
-    <Reference Include="Nancy.Authentication.Forms">
+    <Reference Include="Nancy.Authentication.Forms, Version=0.10.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.Authentication.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Nancy.Hosting.Aspnet, Version=0.10.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -261,7 +261,7 @@
       <Name>BackboneJsOnNancy.Api</Name>
     </ProjectReference>
     <ProjectReference Include="..\BackboneJsOnNancy\BackboneJsOnNancy.csproj">
-      <Project>{B933B963-BAAB-4C81-8AF3-21467C7BB905}</Project>
+      <Project>{980D7708-C91F-4B36-817A-1F02F4FFC12C}</Project>
       <Name>BackboneJsOnNancy</Name>
     </ProjectReference>
   </ItemGroup>

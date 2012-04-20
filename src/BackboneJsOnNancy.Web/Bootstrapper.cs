@@ -17,8 +17,7 @@ namespace BackboneJsOnNancy.Web
 #if !DEBUG
             Cassette.Nancy.CassetteStartup.ShouldOptimizeOutput = true;
 #endif
-            container.Register<IUserMapper, UserMapper>();
-
+            container.Register<IUserMapper>(new UserMapper());
         }
 
         protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
@@ -30,7 +29,6 @@ namespace BackboneJsOnNancy.Web
 
         private void FormsAuthenticationRequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
         {
-
             var config = new FormsAuthenticationConfiguration
                              {
                                  RedirectUrl = "~/login",
