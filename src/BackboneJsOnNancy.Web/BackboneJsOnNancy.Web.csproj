@@ -226,6 +226,7 @@
     <Content Include="assets\javascripts\header\modernizr.js" />
     <Content Include="assets\templates\todo\form.html" />
     <Content Include="Views\authentication\login.cshtml" />
+    <Content Include="Views\authentication\_app_js.cshtml" />
     <None Include="Views\errors\404.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -243,6 +244,7 @@
     <Compile Include="CassetteConfiguration.cs" />
     <Compile Include="ErrorHandlers\Generic404ErrorHandler.cs" />
     <Compile Include="Extensions\ViewFactoryExtensions.cs" />
+    <Compile Include="Models\Authentication\LoginModel.cs" />
     <Compile Include="Modules\AppModule.cs" />
     <Compile Include="Modules\AuthenticationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -5,6 +5,7 @@
 
     public interface IUserService : IUserMapper
     {
+        User GetUser(Guid id);
         Guid? Authenticate(string username, string password);
     }
 }

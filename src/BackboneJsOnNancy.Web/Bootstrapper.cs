@@ -17,7 +17,8 @@ namespace BackboneJsOnNancy.Web
 #if !DEBUG
             Cassette.Nancy.CassetteStartup.ShouldOptimizeOutput = true;
 #endif
-            container.Register<IUserMapper>(new UserMapper());
+            container.Register<IUserService, UserService>();
+            container.Register<IUserMapper>(container.Resolve<IUserService>());
         }
 
         protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
