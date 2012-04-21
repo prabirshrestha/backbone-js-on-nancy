@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{40A7A38B-7AD1-4C1E-8340-8F87BD1339BB}</ProjectGuid>
+    <ProjectGuid>{7EC487E4-2628-4988-BD3D-F3C2A1038A99}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BackboneJsOnNancy.Web.Tests</RootNamespace>
-    <AssemblyName>BackboneJsOnNancy.Web.Tests</AssemblyName>
+    <RootNamespace>BackboneJsOnNancy.Tests</RootNamespace>
+    <AssemblyName>BackboneJsOnNancy.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -40,10 +40,13 @@
       <HintPath>..\packages\Nancy.Testing.0.10.0\lib\net40\HtmlAgilityPlus.dll</HintPath>
     </Reference>
     <Reference Include="Nancy">
-      <HintPath>..\packages\Nancy.0.10.0\lib\net40\Nancy.dll</HintPath>
+      <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Authentication.Forms">
+      <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.Authentication.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Nancy.Testing">
-      <HintPath>..\packages\Nancy.Testing.0.10.0\lib\net40\Nancy.Testing.dll</HintPath>
+      <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.Testing.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,26 +55,13 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="xunit">
+    <Reference Include="xunit, Version=1.9.0.1566, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\xunit.1.9.0.1566\lib\xunit.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BackboneJsOnNancy.Api\BackboneJsOnNancy.Api.csproj">
-      <Project>{8CC54ED4-93C4-4E40-84FB-77DF01157082}</Project>
-      <Name>BackboneJsOnNancy.Api</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BackboneJsOnNancy.Web\BackboneJsOnNancy.Web.csproj">
-      <Project>{C7A58EAB-1084-48A7-9647-866D97E51F38}</Project>
-      <Name>BackboneJsOnNancy.Web</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BackboneJsOnNancy\BackboneJsOnNancy.csproj">
-      <Project>{980D7708-C91F-4B36-817A-1F02F4FFC12C}</Project>
-      <Name>BackboneJsOnNancy</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
