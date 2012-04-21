@@ -19,9 +19,6 @@
 
             Post["/login"] = x =>
                              {
-                                 var ioc = new TinyIoC.TinyIoCContainer();
-                                 x = ioc.Resolve<LoginModel>();
-
                                  var model = this.Bind<LoginModel>();
                                  var guid = userService.Authenticate(model.Username, model.Password);
                                  if (guid == null)
