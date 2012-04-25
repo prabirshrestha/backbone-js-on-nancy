@@ -1,13 +1,14 @@
 ﻿namespace BackboneJsOnNancy
 {
     using System;
+    using Nancy;
     using Nancy.Security;
 
     public class UserService : IUserService
     {
         private static readonly Guid AdminGuid = new Guid("7E2EA61D-519F-4DCF-BFCB-D66935CD51B4");
 
-        public IUserIdentity GetUserFromIdentifier(Guid identifier)
+        public IUserIdentity GetUserFromIdentifier(Guid identifier, NancyContext context)
         {
             return GetUser(identifier);
         }

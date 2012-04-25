@@ -7,11 +7,6 @@
     {
         public long Id { get; set; }
 
-        public User()
-        {
-            Claims = new List<string>();
-        }
-
         public string UserName { get; set; }
         public IEnumerable<string> Claims { get; set; }
     }
