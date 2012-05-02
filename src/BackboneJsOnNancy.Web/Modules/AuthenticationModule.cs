@@ -1,7 +1,9 @@
 ﻿namespace BackboneJsOnNancy.Web.Modules
 {
+    using System;
     using BackboneJsOnNancy.Web.Models.Authentication;
     using Nancy;
+    using Nancy.Authentication.Forms;
     using Nancy.ModelBinding;
     using Nancy.Validation;
 
@@ -31,7 +33,11 @@
                                  if (guid == null)
                                      return Response.AsRedirect("~/login?error=true");
 
-                                 return Response.AsRedirect("~/login");
+                                 DateTime? expiry = null;
+                                 if (model.RememberMe)
+                                     expiry = DateTime.UtcNow.AddDays(14); // 2 weeks
+
+                                 return this.LoginAndRedirect(guid.Value, expiry, "~/");
                              };
 
             Get["/logout"] = x => "logout";

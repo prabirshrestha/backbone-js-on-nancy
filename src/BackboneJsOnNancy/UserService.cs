@@ -13,7 +13,7 @@
 
         static UserService()
         {
-            _users.Add(new Guid(), new Tuple<User, string>(new User { Id = 1, UserName = "admin@nancyfx.org", Claims = new[] { "admin" } }, "admin@123"));
+            _users.Add(new Guid("981ddc9a2b214d35be79b8706d15e1c1"), new Tuple<User, string>(new User { Id = 1, UserName = "admin@nancyfx.org", Claims = new[] { "admin" } }, "admin@123"));
 
         }
 
