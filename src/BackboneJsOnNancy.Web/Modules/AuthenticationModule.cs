@@ -23,7 +23,7 @@
                                  var validationResult = this.Validate(model);
 
                                  if (!validationResult.IsValid)
-                                     return Response.AsRedirect("~login?error=true");
+                                     return Response.AsRedirect("~/login?error=true");
 
                                  var guid = userService.Authenticate(model.Username, model.Password);
                                  if (guid == null)
