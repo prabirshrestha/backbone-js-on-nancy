@@ -1,12 +1,21 @@
 ﻿namespace BackboneJsOnNancy
 {
     using System;
+    using System.Collections.Concurrent;
+    using System.Collections.Generic;
+    using System.Linq;
     using Nancy;
     using Nancy.Security;
 
     public class UserService : IUserService
     {
-        private static readonly Guid AdminGuid = new Guid("7E2EA61D-519F-4DCF-BFCB-D66935CD51B4");
+        private readonly static IDictionary<Guid, Tuple<User, string>> _users = new ConcurrentDictionary<Guid, Tuple<User, string>>();
+
+        static UserService()
+        {
+            _users.Add(new Guid(), new Tuple<User, string>(new User { Id = 1, UserName = "admin@nancyfx.org", Claims = new[] { "admin" } }, "admin@123"));
+
+        }
 
         public IUserIdentity GetUserFromIdentifier(Guid identifier, NancyContext context)
         {
@@ -15,20 +24,16 @@
 
         public User GetUser(Guid id)
         {
-            if (id != AdminGuid)
-                return null;
-
-            return new User
-                       {
-                           Id = 1,
-                           UserName = "admin@nancyfx.org",
-                           Claims = new[] { "admin" }
-                       };
+            Tuple<User, string> u;
+            if (_users.TryGetValue(id, out u))
+                return u.Item1;
+            return null;
         }
 
         public Guid? Authenticate(string username, string password)
         {
-            return username == "admin@nancyfx.org" && password == "admin@123" ? (Guid?)AdminGuid : null;
+            var user = _users.SingleOrDefault(u => u.Value.Item1.UserName == username && u.Value.Item2 == password);
+            return user.Key == default(Guid) ? null : (Guid?)user.Key;
         }
     }
 }
