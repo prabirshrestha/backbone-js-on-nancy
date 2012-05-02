@@ -7,7 +7,7 @@ namespace BackboneJsOnNancy.Web.Modules
     {
         public AppModule()
         {
-            Get["/"] = x => View["/index"];
+            Get["/"] = x => View["index"];
         }
     }
 }
