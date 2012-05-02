@@ -14,6 +14,8 @@
             Get["/login"] = x =>
                             {
                                 ViewBag.preLoadAppStaticContent = preLoadAppStaticContent;
+                                ViewBag.error = Request.Query.error.HasValue && Request.Query.error.Value == "true";
+                                    
                                 return View["authentication/login"];
                             };
 
