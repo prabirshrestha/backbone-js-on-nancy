@@ -245,9 +245,11 @@
     <Content Include="Views\authentication\register.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\javascripts\public_app\views\authentication\login.js" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="CassetteConfiguration.cs" />
     <Compile Include="ErrorHandlers\Generic404ErrorHandler.cs" />
+    <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\ViewFactoryExtensions.cs" />
     <Compile Include="Models\Authentication\LoginModel.cs" />
     <Compile Include="Modules\AppModule.cs" />

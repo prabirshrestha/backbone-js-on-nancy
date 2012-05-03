@@ -1,19 +1,21 @@
 ﻿App.Public.Views.LoginView = Support.CompositeView.extend({
 
-    el: $('div[role="main"] form[role="login"]'),
+    el: $('div[role="main"] form[role=login]'),
 
     events: {
-        'click input[type=submit]': 'login'
+        'submit form': 'onFormSubmit'
     },
 
     initialize: function () {
-        _.bindAll(this, 'login');
+        _.bindAll(this, 'onFormSubmit');
+        console.log(this.el)
     },
 
-    login: function (e) {
+    onFormSubmit: function (e) {
         this.$('input[type=submit]')
             .attr('readonly', 'readonly')
             .addClass('disabled');
+        this.$('input[type=password]').val('');
     }
 
 });

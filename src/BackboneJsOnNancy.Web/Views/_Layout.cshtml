@@ -1,5 +1,4 @@
-﻿@using Cassette.Nancy
-@{
+﻿@{
     Bundles.Reference("assets/stylesheets/style.less");
     Bundles.Reference("assets/javascripts/header");
     Bundles.Reference("assets/javascripts/libs");
@@ -23,27 +22,7 @@
                     Backbone JS on Nancy
                 </a>
                 
-                <ul class="nav pull-right">
-                    <li class="dropdown" id="menu1">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
-                            Login
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            @if (true)
-                            {
-                                <li><a href="@Url.Content("/login")">Login</a></li>
-                                <li><a href="@Url.Content("/register")">Register</a></li>
-                            }
-                            else
-                            {
-                                <li><a href="@Url.Content("~/logout")">Logout</a></li>                                
-                            }
-                            <li class="divider"></li>
-                            <li><a href="@Url.Content("/about")">About</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                @Html.Partial("_loginStatusPartial")
 
             </div>
         </div>
