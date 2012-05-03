@@ -15,6 +15,9 @@
 
             Get["/login"] = x =>
                             {
+                                if (Context.CurrentUser != null)
+                                    return Response.AsRedirect("~/");
+
                                 ViewBag.preLoadAppStaticContent = preLoadAppStaticContent;
                                 ViewBag.error = Request.Query.error.HasValue && Request.Query.error.Value == "true";
 
@@ -25,7 +28,7 @@
                              {
                                  var model = this.Bind<LoginModel>();
                                  var validationResult = this.Validate(model);
-                                 
+
                                  if (!validationResult.IsValid)
                                      return Response.AsRedirect("~/login?error=true");
 
