@@ -47,6 +47,9 @@
 
             Get["/register"] = x =>
                                {
+                                   if (Context.CurrentUser != null)
+                                       return Response.AsRedirect("~/");
+
                                    ViewBag.preLoadAppStaticContent = preLoadAppStaticContent;
                                    return View["authentication/register"];
                                };
