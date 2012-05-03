@@ -8,17 +8,17 @@ App.Public = {
 
     initialize: function (options) {
         options || (options = {});
-        $('.dropdown-toggle').dropdown();
 
+        // ReSharper disable WrongExpressionStatement
         if (options.path) {
-            // ReSharper disable WrongExpressionStatement
             if (options.path === '/register') {
                 new App.Public.Views.RegisterView();
             } else if (options.path === '/login') {
                 new App.Public.Views.LoginView();
             }
-            // ReSharper restore WrongExpressionStatement
         }
+        new App.Public.Views.HeaderView();
+        // ReSharper restore WrongExpressionStatement        
     }
 
 };

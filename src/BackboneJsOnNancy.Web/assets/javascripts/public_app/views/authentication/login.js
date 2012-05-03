@@ -8,7 +8,6 @@
 
     initialize: function () {
         _.bindAll(this, 'onFormSubmit');
-        console.log(this.el)
     },
 
     onFormSubmit: function (e) {

@@ -199,6 +199,7 @@
     <None Include="assets\stylesheets\style.less" />
     <Content Include="assets\javascripts\public_app\app.js" />
     <Content Include="assets\javascripts\public_app\bundle.txt" />
+    <Content Include="assets\javascripts\public_app\views\authentication\header.js" />
     <Content Include="assets\javascripts\public_app\views\authentication\register.js" />
     <Content Include="assets\stylesheets\bootstrap\img\glyphicons-halflings-white.png" />
     <Content Include="assets\stylesheets\bootstrap\img\glyphicons-halflings.png" />
