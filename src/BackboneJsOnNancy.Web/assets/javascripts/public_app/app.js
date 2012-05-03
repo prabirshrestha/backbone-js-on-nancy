@@ -11,11 +11,13 @@ App.Public = {
         $('.dropdown-toggle').dropdown();
 
         if (options.path) {
+            // ReSharper disable WrongExpressionStatement
             if (options.path === '/register') {
-                // ReSharper disable WrongExpressionStatement
                 new App.Public.Views.RegisterView();
-                // ReSharper restore WrongExpressionStatement
+            } else if (options.path === '/login') {
+                new App.Public.Views.LoginView();
             }
+            // ReSharper restore WrongExpressionStatement
         }
     }
 

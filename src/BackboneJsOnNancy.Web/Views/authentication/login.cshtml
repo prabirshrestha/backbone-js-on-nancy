@@ -40,8 +40,7 @@
         </div>
     </div>
     <div class="form-actions">
-        <button type="submit" class="btn btn-primary">
-            Login</button>
+        <input type="submit" class="btn btn-primary" value="Login"/>
     </div>
 </fieldset>
 </form>
@@ -49,7 +48,7 @@
     @Bundles.RenderScripts("libs")
     @Bundles.RenderScripts("public_app")
     <script>
-        App.Public.initialize();
+        App.Public.initialize({ path: '/login' });
     </script>
     @if(ViewBag.preLoadAppStaticContent)
     {
