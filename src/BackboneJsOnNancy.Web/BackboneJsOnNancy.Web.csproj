@@ -241,8 +241,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <None Include="assets\stylesheets\todo\tooltips.less" />
-    <Content Include="Views\_Layout.cshtml" />
+    <Content Include="Views\_Lyout.cshtml" />
     <Content Include="Views\authentication\register.cshtml" />
+    <Content Include="Views\_loginStatusPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\javascripts\public_app\views\authentication\login.js" />
