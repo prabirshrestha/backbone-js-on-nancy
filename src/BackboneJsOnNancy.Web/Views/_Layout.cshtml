@@ -30,8 +30,15 @@
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="@Url.Content("/login")">Login</a></li>
-                            <li><a href="@Url.Content("/register")">Register</a></li>
+                            @if (true)
+                            {
+                                <li><a href="@Url.Content("/login")">Login</a></li>
+                                <li><a href="@Url.Content("/register")">Register</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="@Url.Content("~/logout")">Logout</a></li>                                
+                            }
                             <li class="divider"></li>
                             <li><a href="@Url.Content("/about")">About</a></li>
                         </ul>

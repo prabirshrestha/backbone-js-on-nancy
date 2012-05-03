@@ -25,7 +25,7 @@
                              {
                                  var model = this.Bind<LoginModel>();
                                  var validationResult = this.Validate(model);
-
+                                 
                                  if (!validationResult.IsValid)
                                      return Response.AsRedirect("~/login?error=true");
 
@@ -40,7 +40,7 @@
                                  return this.LoginAndRedirect(guid.Value, expiry, "~/");
                              };
 
-            Get["/logout"] = x => "logout";
+            Get["/logout"] = x => this.LogoutAndRedirect("~/");
 
             Get["/register"] = x =>
                                {
