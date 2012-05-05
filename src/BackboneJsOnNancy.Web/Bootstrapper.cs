@@ -6,6 +6,7 @@ namespace BackboneJsOnNancy.Web
     using Nancy;
     using Nancy.Authentication.Forms;
     using Nancy.Bootstrapper;
+    using Nancy.Conventions;
     using TinyIoC;
 
     public class Bootstrapper : DefaultNancyBootstrapper
@@ -37,6 +38,12 @@ namespace BackboneJsOnNancy.Web
                              };
 
             FormsAuthentication.Enable(pipelines, config);
+        }
+
+        protected override void ConfigureConventions(NancyConventions nancyConventions)
+        {
+            base.ConfigureConventions(nancyConventions);
+            nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("/", "public"));
         }
 
         protected override NancyInternalConfiguration InternalConfiguration

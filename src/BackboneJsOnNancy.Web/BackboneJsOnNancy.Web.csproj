@@ -281,6 +281,7 @@
     <Folder Include="assets\javascripts\public_app\collections\" />
     <Folder Include="assets\javascripts\public_app\models\" />
     <Folder Include="assets\javascripts\public_app\routers\" />
+    <Folder Include="public\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
