@@ -45,9 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxMin, Version=4.48.4489.28432, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+    <Reference Include="AjaxMin, Version=4.51.4507.18296, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\AjaxMin.4.48.4489.28432\lib\net20\AjaxMin.dll</HintPath>
+      <HintPath>..\packages\AjaxMin.4.51.4507.18296\lib\net20\AjaxMin.dll</HintPath>
     </Reference>
     <Reference Include="Cassette, Version=1.2.1.30492, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -104,7 +104,7 @@
       <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.ViewEngines.Razor.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.4.5.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.4\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Pandora, Version=0.1.0.4, Culture=neutral, PublicKeyToken=b270b2005bfa7bcd, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -116,9 +116,9 @@
     <Reference Include="SassAndCoffee.Ruby">
       <HintPath>..\packages\SassAndCoffee.Ruby.2.0.2.0\lib\net40-Client\SassAndCoffee.Ruby.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Text, Version=3.6.9.2502, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="ServiceStack.Text, Version=3.7.6.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\ServiceStack.Text.3.6.9\lib\net35\ServiceStack.Text.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.Text.3.7.6\lib\net35\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />

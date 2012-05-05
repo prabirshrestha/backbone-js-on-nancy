@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentValidation, Version=3.3.1.0, Culture=neutral, PublicKeyToken=a82054b837897c66, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.3.3.1.0\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\Nancy.Testing.0.10.0\lib\net40\HtmlAgilityPack.dll</HintPath>
     </Reference>
@@ -42,8 +45,20 @@
     <Reference Include="Nancy, Version=0.10.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.dll</HintPath>
     </Reference>
+    <Reference Include="Nancy.Authentication.Forms, Version=0.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.Authentication.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Serialization.ServiceStack">
+      <HintPath>..\packages\Nancy.Serialization.ServiceStack.0.10.0\lib\net40\Nancy.Serialization.ServiceStack.dll</HintPath>
+    </Reference>
     <Reference Include="Nancy.Testing, Version=0.10.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.Testing.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Validation.FluentValidation, Version=0.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\nancyfx\nancy-prabir\build\binaries\Nancy.Validation.FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack.Text.2.26\lib\net35\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -76,6 +91,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
