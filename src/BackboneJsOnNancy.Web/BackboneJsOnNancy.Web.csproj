@@ -232,6 +232,7 @@
     <Content Include="assets\javascripts\libs\underscore.js" />
     <Content Include="assets\javascripts\header\modernizr.js" />
     <Content Include="assets\templates\todo\form.html" />
+    <Content Include="public\robots.txt" />
     <Content Include="Views\authentication\login.cshtml" />
     <Content Include="Views\authentication\_app_js.cshtml" />
     <None Include="Views\errors\404.cshtml" />
@@ -281,7 +282,6 @@
     <Folder Include="assets\javascripts\public_app\collections\" />
     <Folder Include="assets\javascripts\public_app\models\" />
     <Folder Include="assets\javascripts\public_app\routers\" />
-    <Folder Include="public\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
