@@ -15,6 +15,7 @@ App = {
         // ReSharper disable WrongExpressionStatement
         new App.Routers.Todo({ todos: this.todos });
         new App.Routers.About();
+        new App.Views.HeaderView();
         // ReSharper restore WrongExpressionStatement
 
         if (!Backbone.history.started) {
