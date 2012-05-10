@@ -11,12 +11,11 @@
     },
 
     onFormSubmit: function (e) {
-        this.$('input[type=submit]')
-            .attr('readonly', 'readonly')
-            .addClass('disabled');
-
         var self = this;
         setTimeout(function () {
+            self.$('input[type=submit]')
+                .attr('disabled', 'disabled')
+                .addClass('disabled');
             self.$('input[type=password]').val('');
         }, 200);
     }
