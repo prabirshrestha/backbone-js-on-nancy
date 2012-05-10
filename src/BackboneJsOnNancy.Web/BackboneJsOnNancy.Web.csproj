@@ -261,6 +261,7 @@
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\ViewFactoryExtensions.cs" />
     <Compile Include="Models\Authentication\LoginModel.cs" />
+    <Compile Include="Models\Authentication\RegisterModel.cs" />
     <Compile Include="Modules\AppModule.cs" />
     <Compile Include="Modules\AuthenticationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
