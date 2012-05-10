@@ -3,7 +3,7 @@
     el: $('div[role="main"] form[role=login]'),
 
     events: {
-        'submit form': 'onFormSubmit'
+        'submit': 'onFormSubmit'
     },
 
     initialize: function () {
@@ -14,7 +14,11 @@
         this.$('input[type=submit]')
             .attr('readonly', 'readonly')
             .addClass('disabled');
-        this.$('input[type=password]').val('');
+
+        var self = this;
+        setTimeout(function () {
+            self.$('input[type=password]').val('');
+        }, 200);
     }
 
 });
