@@ -51,21 +51,25 @@
                                    if (Context.CurrentUser != null)
                                        return Response.AsRedirect("~/");
 
-                                   var model = this.Bind<RegisterModel>();
-                                   var validationResult = this.Validate(model);
-
-                                   if (!validationResult.IsValid)
-                                   {
-                                       var errors = validationResult.Errors.ToList();
-                                   }
-
                                    ViewBag.preLoadAppStaticContent = preLoadAppStaticContent;
                                    return View["authentication/register"];
                                };
 
             Post["/register"] = x =>
                                 {
-                                    return Response.AsRedirect("~/register?success=true");
+                                    if (Context.CurrentUser != null)
+                                        return Response.AsRedirect("~/");
+
+                                    var model = this.Bind<RegisterModel>();
+                                    var validationResult = this.Validate(model);
+                                    ViewBag.errors = validationResult;
+
+                                    if (!validationResult.IsValid)
+                                    {
+                                    }
+
+                                    ViewBag.preLoadAppStaticContent = preLoadAppStaticContent;
+                                    return View["authentication/register"];
                                 };
         }
     }

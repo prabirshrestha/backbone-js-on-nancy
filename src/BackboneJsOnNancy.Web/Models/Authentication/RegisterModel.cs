@@ -18,8 +18,8 @@
 
             RuleFor(m => m.Password).NotEmpty().WithMessage("Password required");
             RuleFor(m => m.Password).Length(5, 25).WithMessage("Password length must be between 5-25 characters long");
-            RuleFor(m => m.ConfirmPassword).NotEmpty().WithMessage("Confirm Password required");
 
+            RuleFor(m => m.ConfirmPassword).NotEmpty().WithMessage("Confirm Password required");
             RuleFor(m => m.ConfirmPassword).Equal(m => m.Password).WithMessage("Password and Confirm password does not match");
         }
     }
