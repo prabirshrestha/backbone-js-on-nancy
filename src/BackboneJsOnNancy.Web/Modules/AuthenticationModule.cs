@@ -12,7 +12,7 @@
     {
         public AuthenticationModule(IUserService userService)
         {
-            bool preLoadAppStaticContent = Cassette.Nancy.CassetteStartup.ShouldOptimizeOutput;
+            bool preLoadAppStaticContent = Cassette.Nancy.CassetteNancyStartup.OptimizeOutput;
 
             Get["/login"] = x =>
                             {
