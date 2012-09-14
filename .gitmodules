@@ -1,6 +1,3 @@
 [submodule "nancyfx/nancy-prabir"]
 	path = nancyfx/nancy-prabir
 	url = https://github.com/prabirshrestha/Nancy.git
-[submodule "nancyfx/Nancy.RouterHelpers"]
-	path = nancyfx/Nancy.RouterHelpers
-	url = git@github.com:prabirshrestha/Nancy.RouteHelpers.git
