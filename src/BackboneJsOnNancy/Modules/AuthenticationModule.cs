@@ -1,8 +1,7 @@
-﻿namespace BackboneJsOnNancy.Web.Modules
+﻿namespace BackboneJsOnNancy.Modules
 {
     using System;
-    using System.Linq;
-    using BackboneJsOnNancy.Web.Models.Authentication;
+    using BackboneJsOnNancy.Models.Authentication;
     using Nancy;
     using Nancy.Authentication.Forms;
     using Nancy.ModelBinding;

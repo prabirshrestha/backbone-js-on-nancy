@@ -1,5 +1,5 @@
 ﻿
-namespace BackboneJsOnNancy.Web.Modules
+namespace BackboneJsOnNancy.Modules
 {
     using Nancy;
 

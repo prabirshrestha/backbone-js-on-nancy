@@ -1,5 +1,5 @@
 
-namespace BackboneJsOnNancy.Web
+namespace BackboneJsOnNancy
 {
     using Cassette;
     using Cassette.HtmlTemplates;

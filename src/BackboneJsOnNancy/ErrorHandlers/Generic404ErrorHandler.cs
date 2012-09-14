@@ -1,4 +1,4 @@
-﻿namespace BackboneJsOnNancy.Web.ErrorHandlers
+﻿namespace BackboneJsOnNancy.ErrorHandlers
 {
     using Extensions;
     using Nancy;

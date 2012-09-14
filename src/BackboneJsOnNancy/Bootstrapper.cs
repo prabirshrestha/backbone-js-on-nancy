@@ -1,5 +1,5 @@
 ﻿
-namespace BackboneJsOnNancy.Web
+namespace BackboneJsOnNancy
 {
     using System;
     using System.Collections.Generic;
@@ -56,7 +56,7 @@ namespace BackboneJsOnNancy.Web
                         x.ErrorHandlers = new List<Type>
                                               {
                                                   typeof (ErrorHandlers.Generic404ErrorHandler),
-                                                  typeof (Api.ErrorHandlers.Api404ErrorHandler),
+                                                  typeof (ErrorHandlers.Api404ErrorHandler),
                                                   typeof (Nancy.ErrorHandling.DefaultErrorHandler),
                                               };
                     });

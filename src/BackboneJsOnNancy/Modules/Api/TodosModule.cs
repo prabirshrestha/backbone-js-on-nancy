@@ -1,4 +1,4 @@
-﻿namespace BackboneJsOnNancy.Api.Modules
+﻿namespace BackboneJsOnNancy.Modules.Api
 {
     public class TodosModule : ApiModule
     {

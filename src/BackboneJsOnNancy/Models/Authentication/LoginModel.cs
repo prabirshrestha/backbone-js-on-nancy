@@ -1,4 +1,4 @@
-﻿namespace BackboneJsOnNancy.Web.Models.Authentication
+﻿namespace BackboneJsOnNancy.Models.Authentication
 {
     using FluentValidation;
 

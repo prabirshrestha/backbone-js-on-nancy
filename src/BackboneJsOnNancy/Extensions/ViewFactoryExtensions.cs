@@ -1,4 +1,4 @@
-﻿namespace BackboneJsOnNancy.Web.Extensions
+﻿namespace BackboneJsOnNancy.Extensions
 {
     using System;
     using System.Linq;

@@ -1,4 +1,4 @@
-﻿namespace BackboneJsOnNancy.Api.ErrorHandlers
+﻿namespace BackboneJsOnNancy.ErrorHandlers
 {
     using System.Collections.Generic;
     using System.Linq;
