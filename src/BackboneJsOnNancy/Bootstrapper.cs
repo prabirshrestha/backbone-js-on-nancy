@@ -16,7 +16,7 @@ namespace BackboneJsOnNancy
             base.ApplicationStartup(container, pipelines);
 
 #if !DEBUG
-            Cassette.Nancy.CassetteStartup.ShouldOptimizeOutput = true;
+            Cassette.Nancy.CassetteNancyStartup.OptimizeOutput = true;
 #endif
             container.Register<IUserService, UserService>();
             container.Register<IUserMapper>(container.Resolve<IUserService>());
