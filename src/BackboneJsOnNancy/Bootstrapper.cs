@@ -3,6 +3,7 @@ namespace BackboneJsOnNancy
 {
     using System;
     using System.Collections.Generic;
+    using BackboneJsOnNancy.Services;
     using Nancy;
     using Nancy.Authentication.Forms;
     using Nancy.Bootstrapper;

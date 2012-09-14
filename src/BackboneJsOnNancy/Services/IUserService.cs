@@ -1,4 +1,4 @@
-﻿namespace BackboneJsOnNancy
+﻿namespace BackboneJsOnNancy.Services
 {
     using System;
     using Nancy.Authentication.Forms;
