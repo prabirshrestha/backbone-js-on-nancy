@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackboneJsOnNancy", "BackboneJsOnNancy\BackboneJsOnNancy.csproj", "{C7A58EAB-1084-48A7-9647-866D97E51F38}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1A286376-B3F5-40CE-90DA-E3F6B4183DEF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackboneJsOnNancy.Tests", "BackboneJsOnNancy.Tests\BackboneJsOnNancy.Tests.csproj", "{7EC487E4-2628-4988-BD3D-F3C2A1038A99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackboneJsOnNancy.Web", "BackboneJsOnNancy.Web\BackboneJsOnNancy.Web.csproj", "{C7A58EAB-1084-48A7-9647-866D97E51F38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C7A58EAB-1084-48A7-9647-866D97E51F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7A58EAB-1084-48A7-9647-866D97E51F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7A58EAB-1084-48A7-9647-866D97E51F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7A58EAB-1084-48A7-9647-866D97E51F38}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7EC487E4-2628-4988-BD3D-F3C2A1038A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7EC487E4-2628-4988-BD3D-F3C2A1038A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EC487E4-2628-4988-BD3D-F3C2A1038A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EC487E4-2628-4988-BD3D-F3C2A1038A99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7A58EAB-1084-48A7-9647-866D97E51F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7A58EAB-1084-48A7-9647-866D97E51F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7A58EAB-1084-48A7-9647-866D97E51F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7A58EAB-1084-48A7-9647-866D97E51F38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

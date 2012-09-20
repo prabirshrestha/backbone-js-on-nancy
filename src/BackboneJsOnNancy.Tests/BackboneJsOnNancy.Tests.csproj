@@ -69,12 +69,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BackboneJsOnNancy\BackboneJsOnNancy.csproj">
-      <Project>{c7a58eab-1084-48a7-9647-866d97e51f38}</Project>
-      <Name>BackboneJsOnNancy</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
