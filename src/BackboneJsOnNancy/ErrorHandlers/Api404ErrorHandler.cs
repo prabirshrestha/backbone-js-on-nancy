@@ -29,8 +29,10 @@
                                 message = "The resource you requested does not exist"
                             };
 
-            var response = new JsonResponse(new { error }, serializer);
-            response.StatusCode = HttpStatusCode.NotFound;
+            var response = new JsonResponse(new { error }, serializer)
+                               {
+                                   StatusCode = HttpStatusCode.NotFound
+                               };
 
             context.Response = response;
         }

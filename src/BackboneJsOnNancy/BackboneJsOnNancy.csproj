@@ -232,6 +232,7 @@
     <Content Include="Views\_loginStatusPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ErrorHandlers\Api500ErrorHandler.cs" />
     <Compile Include="Services\User.cs" />
     <Compile Include="Services\UserService.cs" />
     <Content Include="assets\javascripts\public_app\views\authentication\login.js" />
