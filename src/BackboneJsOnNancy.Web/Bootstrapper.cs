@@ -3,7 +3,6 @@ namespace BackboneJsOnNancy
 {
     using System;
     using System.Collections.Generic;
-    using BackboneJsOnNancy.Services;
     using Nancy;
     using Nancy.Authentication.Forms;
     using Nancy.Bootstrapper;
@@ -58,6 +57,7 @@ namespace BackboneJsOnNancy
                                               {
                                                   typeof (ErrorHandlers.Generic404ErrorHandler),
                                                   typeof (ErrorHandlers.Api404ErrorHandler),
+                                                  typeof(ErrorHandlers.Api500ErrorHandler),
                                                   typeof (Nancy.ErrorHandling.DefaultErrorHandler),
                                               };
                     });

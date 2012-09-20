@@ -233,8 +233,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ErrorHandlers\Api500ErrorHandler.cs" />
-    <Compile Include="Services\User.cs" />
-    <Compile Include="Services\UserService.cs" />
     <Content Include="assets\javascripts\public_app\views\authentication\login.js" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="CassetteConfiguration.cs" />
@@ -242,7 +240,6 @@
     <Compile Include="ErrorHandlers\Generic404ErrorHandler.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\ViewFactoryExtensions.cs" />
-    <Compile Include="Services\IUserService.cs" />
     <Compile Include="Modules\Api\TodosModule.cs" />
     <Compile Include="Modules\Api\_ApiModule.cs" />
     <Compile Include="Models\Authentication\LoginModel.cs" />
@@ -263,6 +260,12 @@
     <Folder Include="assets\javascripts\public_app\collections\" />
     <Folder Include="assets\javascripts\public_app\models\" />
     <Folder Include="assets\javascripts\public_app\routers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BackboneJsOnNancy\BackboneJsOnNancy.csproj">
+      <Project>{088cc35e-e4a6-4e3f-a59f-a1bcaee827a4}</Project>
+      <Name>BackboneJsOnNancy</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

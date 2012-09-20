@@ -2,7 +2,6 @@
 {
     using System;
     using BackboneJsOnNancy.Models.Authentication;
-    using BackboneJsOnNancy.Services;
     using Nancy;
     using Nancy.Authentication.Forms;
     using Nancy.ModelBinding;
