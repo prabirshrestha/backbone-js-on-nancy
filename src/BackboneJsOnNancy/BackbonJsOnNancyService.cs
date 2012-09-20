@@ -5,16 +5,16 @@
     using System.Collections.Generic;
     using System.Linq;
     using Nancy;
+    using Nancy.Authentication.Forms;
     using Nancy.Security;
 
-    public class UserService : IUserService
+    public class BackbonJsOnNancyService : IUserMapper
     {
         private readonly static IDictionary<Guid, Tuple<User, string>> _users = new ConcurrentDictionary<Guid, Tuple<User, string>>();
 
-        static UserService()
+        static BackbonJsOnNancyService()
         {
             _users.Add(new Guid("981ddc9a2b214d35be79b8706d15e1c1"), new Tuple<User, string>(new User { Id = 1, UserName = "admin@nancyfx.org", Claims = new[] { "admin" } }, "admin@123"));
-
         }
 
         public IUserIdentity GetUserFromIdentifier(Guid identifier, NancyContext context)

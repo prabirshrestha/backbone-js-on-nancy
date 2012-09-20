@@ -1,7 +1,7 @@
-﻿namespace BackboneJsOnNancy.Modules
+﻿namespace BackboneJsOnNancy.Web.Modules
 {
     using System;
-    using BackboneJsOnNancy.Models.Authentication;
+    using BackboneJsOnNancy.Web.Models.Authentication;
     using Nancy;
     using Nancy.Authentication.Forms;
     using Nancy.ModelBinding;
@@ -9,7 +9,7 @@
 
     public class AuthenticationModule : NancyModule
     {
-        public AuthenticationModule(IUserService userService)
+        public AuthenticationModule(BackbonJsOnNancyService service)
         {
             bool preLoadAppStaticContent = Cassette.Nancy.CassetteNancyStartup.OptimizeOutput;
 
@@ -32,7 +32,7 @@
                                  if (!validationResult.IsValid)
                                      return Response.AsRedirect("~/login?error=true");
 
-                                 var guid = userService.Authenticate(model.Username, model.Password);
+                                 var guid = service.Authenticate(model.Username, model.Password);
                                  if (guid == null)
                                      return Response.AsRedirect("~/login?error=true");
 

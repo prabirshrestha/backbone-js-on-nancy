@@ -1,4 +1,4 @@
-﻿namespace BackboneJsOnNancy.Modules.Api
+﻿namespace BackboneJsOnNancy.Web.Modules.Api
 {
     using Nancy;
 

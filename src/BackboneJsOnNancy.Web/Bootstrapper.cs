@@ -1,8 +1,9 @@
 ﻿
-namespace BackboneJsOnNancy
+namespace BackboneJsOnNancy.Web
 {
     using System;
     using System.Collections.Generic;
+    using BackboneJsOnNancy.Web.ErrorHandlers;
     using Nancy;
     using Nancy.Authentication.Forms;
     using Nancy.Bootstrapper;
@@ -18,8 +19,8 @@ namespace BackboneJsOnNancy
 #if !DEBUG
             Cassette.Nancy.CassetteNancyStartup.OptimizeOutput = true;
 #endif
-            container.Register<IUserService, UserService>();
-            container.Register<IUserMapper>(container.Resolve<IUserService>());
+            container.Register<BackbonJsOnNancyService>().AsSingleton();
+            container.Register<IUserMapper>(container.Resolve<BackbonJsOnNancyService>());
         }
 
         protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
@@ -55,9 +56,9 @@ namespace BackboneJsOnNancy
                     {
                         x.ErrorHandlers = new List<Type>
                                               {
-                                                  typeof (ErrorHandlers.Generic404ErrorHandler),
-                                                  typeof (ErrorHandlers.Api404ErrorHandler),
-                                                  typeof(ErrorHandlers.Api500ErrorHandler),
+                                                  typeof (Generic404ErrorHandler),
+                                                  typeof (Api404ErrorHandler),
+                                                  typeof (Api500ErrorHandler),
                                                   typeof (Nancy.ErrorHandling.DefaultErrorHandler),
                                               };
                     });
