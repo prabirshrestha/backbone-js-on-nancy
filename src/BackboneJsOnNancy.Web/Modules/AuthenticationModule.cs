@@ -13,63 +13,67 @@
         {
             bool preLoadAppStaticContent = Cassette.Nancy.CassetteNancyStartup.OptimizeOutput;
 
-            Get["/login"] = x =>
-                            {
-                                if (Context.CurrentUser != null)
-                                    return Response.AsRedirect("~/");
+            Get["/login"] =
+                _ =>
+                {
+                    if (Context.CurrentUser != null)
+                        return Response.AsRedirect("~/");
 
-                                ViewBag.preLoadAppStaticContent = preLoadAppStaticContent;
-                                ViewBag.error = Request.Query.error.HasValue && Request.Query.error.Value == "true";
+                    ViewBag.preLoadAppStaticContent = preLoadAppStaticContent;
+                    ViewBag.error = Request.Query.error.HasValue && Request.Query.error.Value == "true";
 
-                                return View["authentication/login"];
-                            };
+                    return View["authentication/login"];
+                };
 
-            Post["/login"] = x =>
-                             {
-                                 var model = this.Bind<LoginModel>();
-                                 var validationResult = this.Validate(model);
+            Post["/login"] =
+                _ =>
+                {
+                    var model = this.Bind<LoginModel>();
+                    var validationResult = this.Validate(model);
 
-                                 if (!validationResult.IsValid)
-                                     return Response.AsRedirect("~/login?error=true");
+                    if (!validationResult.IsValid)
+                        return Response.AsRedirect("~/login?error=true");
 
-                                 var guid = service.Authenticate(model.Username, model.Password);
-                                 if (guid == null)
-                                     return Response.AsRedirect("~/login?error=true");
+                    var guid = service.Authenticate(model.Username, model.Password);
+                    if (guid == null)
+                        return Response.AsRedirect("~/login?error=true");
 
-                                 DateTime? expiry = null;
-                                 if (model.RememberMe)
-                                     expiry = DateTime.UtcNow.AddDays(14); // 2 weeks
+                    DateTime? expiry = null;
+                    if (model.RememberMe)
+                        expiry = DateTime.UtcNow.AddDays(14); // 2 weeks
 
-                                 return this.LoginAndRedirect(guid.Value, expiry, "~/");
-                             };
+                    return this.LoginAndRedirect(guid.Value, expiry, "~/");
+                };
 
-            Get["/logout"] = x => this.LogoutAndRedirect("~/");
+            Get["/logout"] = _ => this.LogoutAndRedirect("~/");
 
-            Get["/register"] = x =>
-                               {
-                                   if (Context.CurrentUser != null)
-                                       return Response.AsRedirect("~/");
+            Get["/register"] =
+                _ =>
+                {
+                    if (Context.CurrentUser != null)
+                        return Response.AsRedirect("~/");
 
-                                   ViewBag.preLoadAppStaticContent = preLoadAppStaticContent;
-                                   return View["authentication/register"];
-                               };
+                    ViewBag.preLoadAppStaticContent = preLoadAppStaticContent;
+                    return View["authentication/register"];
+                };
 
-            Post["/register"] = x =>
-                                {
-                                    if (Context.CurrentUser != null)
-                                        return Response.AsRedirect("~/");
+            Post["/register"] =
+                _ =>
+                {
+                    if (Context.CurrentUser != null)
+                        return Response.AsRedirect("~/");
 
-                                    var model = this.Bind<RegisterModel>();
-                                    var validationResult = this.Validate(model);
-                                    ViewBag.errors = validationResult;
+                    var model = this.Bind<RegisterModel>();
+                    var validationResult = this.Validate(model);
+                    ViewBag.errors = validationResult;
 
-                                    if (!validationResult.IsValid)
-                                    {
-                                    }
+                    if (!validationResult.IsValid)
+                    {
+                    }
 
-                                    ViewBag.preLoadAppStaticContent = preLoadAppStaticContent;
-                                    return View["authentication/register"];
-                                };
+                    ViewBag.preLoadAppStaticContent = preLoadAppStaticContent;
+                    return View["authentication/register"];
+                };
         }
     }
 }
