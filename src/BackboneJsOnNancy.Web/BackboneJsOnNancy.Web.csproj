@@ -222,7 +222,9 @@
     <Content Include="Views\authentication\login.cshtml" />
     <Content Include="Views\authentication\_app_js.cshtml" />
     <None Include="Views\errors\404.cshtml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
