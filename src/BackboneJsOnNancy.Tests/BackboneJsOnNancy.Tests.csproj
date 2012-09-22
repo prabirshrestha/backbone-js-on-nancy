@@ -33,23 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Nancy.Testing.0.11.0\lib\net40\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="CsQuery">
+      <HintPath>..\packages\CsQuery.1.2.1\lib\net40\CsQuery.dll</HintPath>
     </Reference>
-    <Reference Include="HtmlAgilityPlus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Nancy.Testing.0.11.0\lib\net40\HtmlAgilityPlus.dll</HintPath>
-    </Reference>
-    <Reference Include="Nancy, Version=0.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Nancy, Version=0.12.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Nancy.0.11.0\lib\net40\Nancy.dll</HintPath>
+      <HintPath>..\packages\Nancy.0.12.1\lib\net40\Nancy.dll</HintPath>
     </Reference>
-    <Reference Include="Nancy.Authentication.Forms, Version=0.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Nancy.Authentication.Forms, Version=0.12.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Nancy.Authentication.Forms.0.11.0\lib\net40\Nancy.Authentication.Forms.dll</HintPath>
+      <HintPath>..\packages\Nancy.Authentication.Forms.0.12.1\lib\net40\Nancy.Authentication.Forms.dll</HintPath>
     </Reference>
-    <Reference Include="Nancy.Testing, Version=0.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Nancy.Testing, Version=0.12.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Nancy.Testing.0.11.0\lib\net40\Nancy.Testing.dll</HintPath>
+      <HintPath>..\packages\Nancy.Testing.0.12.1\lib\net40\Nancy.Testing.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,10 +55,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="xunit, Version=1.9.0.1566, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\xunit.1.9.0.1566\lib\xunit.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

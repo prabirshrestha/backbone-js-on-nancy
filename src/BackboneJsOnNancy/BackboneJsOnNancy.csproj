@@ -32,11 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Nancy">
-      <HintPath>..\packages\Nancy.0.11.0\lib\net40\Nancy.dll</HintPath>
+    <Reference Include="Nancy, Version=0.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Nancy.0.12.1\lib\net40\Nancy.dll</HintPath>
     </Reference>
-    <Reference Include="Nancy.Authentication.Forms">
-      <HintPath>..\packages\Nancy.Authentication.Forms.0.11.0\lib\net40\Nancy.Authentication.Forms.dll</HintPath>
+    <Reference Include="Nancy.Authentication.Forms, Version=0.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Nancy.Authentication.Forms.0.12.1\lib\net40\Nancy.Authentication.Forms.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
